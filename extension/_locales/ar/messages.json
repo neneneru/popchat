@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "يضيف الدردشة إلى نوافذ Twitch المنبثقة."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (المساعدة والإعدادات)"
+  },
+  "layoutGroup": {
+    "message": "موضع الدردشة"
+  },
+  "modeAutoTitle": {
+    "message": "ترتيب الدردشة تلقائيًا حسب حجم النافذة"
+  },
+  "modeSideTitle": {
+    "message": "عرض الدردشة على اليمين"
+  },
+  "modeBottomTitle": {
+    "message": "عرض الدردشة أسفل الفيديو"
+  },
+  "modeHideTitle": {
+    "message": "إخفاء الدردشة"
+  },
+  "chatFrameTitle": {
+    "message": "دردشة Twitch الرسمية لقناة $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "إعادة تحميل"
+  },
+  "reloadTitle": {
+    "message": "إعادة تحميل الدردشة الرسمية"
+  },
+  "separateLabel": {
+    "message": "نافذة مستقلة"
+  },
+  "separateTitle": {
+    "message": "فتح الدردشة الرسمية في نافذة مستقلة"
+  },
+  "gearEntry": {
+    "message": "نافذة منبثقة (في المقدمة دائمًا)"
+  },
+  "errorPopupBlocked": {
+    "message": "تعذّر فتح نافذة الدردشة. تحقّق من إعدادات النوافذ المنبثقة لهذا الموقع."
+  },
+  "errorVideoMissing": {
+    "message": "لم يتم العثور على فيديو بعد. شغّل البث ثم حاول مجددًا."
+  },
+  "errorPipUnsupported": {
+    "message": "لا يدعم هذا المتصفح النافذة التي تبقى في المقدمة. استخدم نافذة Twitch المنبثقة العادية."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · في المقدمة دائمًا",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "يجري التشغيل في النافذة التي تبقى في المقدمة · أغلقها لإعادة الفيديو إلى هنا"
+  },
+  "statusPlayerReplaced": {
+    "message": "حدّث Twitch المشغل، فعاد الفيديو إلى مكانه. بعد استقرار التشغيل، اختر «نافذة منبثقة (في المقدمة دائمًا)» مجددًا من إعدادات المشغل."
+  },
+  "errorPipOpen": {
+    "message": "تعذّر فتح النافذة التي تبقى في المقدمة. اضغط الزر مجددًا أو استخدم نافذة Twitch المنبثقة العادية."
+  },
+  "statusPageUpdated": {
+    "message": "عاد الفيديو إلى مكانه لأن صفحة Twitch حُدّثت."
+  },
+  "errorChatEmbed": {
+    "message": "منع الموقع عرض الدردشة المضمّنة. استخدم «نافذة مستقلة» لفتح الدردشة الرسمية بشكل منفصل."
+  },
+  "helpHeading": {
+    "message": "طريقة الاستخدام"
+  },
+  "helpOpenInstruction": {
+    "message": "في صفحة بث مباشر على Twitch، انقر على رمز الترس في المشغل."
+  },
+  "helpNativeInstruction": {
+    "message": "اختر «نافذة منبثقة» لفتح نافذة عادية، أو «نافذة منبثقة (في المقدمة دائمًا)» لفتح نافذة تبقى فوق النوافذ الأخرى."
+  },
+  "helpLayoutInstruction": {
+    "message": "اختر موضع الدردشة من أعلى النافذة الصغيرة."
+  },
+  "helpKeepTabInstruction": {
+    "message": "أبقِ علامة تبويب Twitch الأصلية مفتوحة أثناء استخدام النافذة التي تبقى في المقدمة. يؤدي إغلاق علامة التبويب الأصلية أو إعادة تحميلها أو الانتقال إلى صفحة أخرى فيها إلى إغلاق النافذة الصغيرة أيضًا."
+  },
+  "helpRestoreNote": {
+    "message": "عند إغلاق النافذة الصغيرة، يعود الفيديو إلى علامة التبويب الأصلية."
+  },
+  "helpReloadNote": {
+    "message": "إذا لم يظهر الخيار، فأعِد تحميل صفحة القناة المباشرة العادية على Twitch."
+  },
+  "helpUnofficial": {
+    "message": "امتداد غير رسمي، لا تقدّمه Twitch ولا تؤيّده."
+  },
+  "consentHeading": {
+    "message": "قبل البدء"
+  },
+  "consentEnable": {
+    "message": "تفعيل"
+  },
+  "consentLater": {
+    "message": "ليس الآن"
+  },
+  "consentEnabled": {
+    "message": "مفعّل. يمكنك استخدامه في صفحات البث المباشر على Twitch."
+  },
+  "consentDisable": {
+    "message": "تعطيل"
+  },
+  "consentSaveError": {
+    "message": "تعذّر حفظ الإعدادات. يُرجى المحاولة مجددًا."
+  },
+  "onboardingSummary": {
+    "message": "يضيف الدردشة الرسمية إلى نوافذ Twitch المنبثقة."
+  },
+  "consentQuestion": {
+    "message": "هل تسمح بتحميل دردشة Twitch الرسمية وعرضها؟"
+  },
+  "consentLocalUse": {
+    "message": "تُستخدم معلومات صفحة البث اللازمة للعرض على جهازك، ولا تُرسل إلى المطوّر."
+  },
+  "consentStored": {
+    "message": "لا يُحفظ على جهازك سوى إعدادات العرض واختيارك بشأن الموافقة."
+  },
+  "consentAgreement": {
+    "message": "راجع هذه المعلومات واختر «تفعيل» إذا كنت موافقًا."
+  },
+  "consentDeferred": {
+    "message": "لا يزال الامتداد معطّلًا. يمكنك تفعيله من هذه الصفحة في أي وقت."
+  },
+  "notesHeading": {
+    "message": "ملاحظات"
+  },
+  "documentPipNote": {
+    "message": "تستخدم النافذة التي تبقى في المقدمة ميزة Document Picture-in-Picture. لا تضيف هذه الميزة الدردشة إلى وضع PiP العادي المخصّص للفيديو فقط."
+  },
+  "settingsHeading": {
+    "message": "إعدادات ميزات العرض"
+  },
+  "popupEnabled": {
+    "message": "مفعّل"
+  },
+  "popupDisabled": {
+    "message": "معطّل"
+  },
+  "popupOpen": {
+    "message": "المساعدة والإعدادات"
+  },
+  "popupHint": {
+    "message": "يمكنك مراجعة معلومات الموافقة الأولية وإدارة الإعدادات في الصفحة المخصّصة."
+  },
+  "errorOpenSettings": {
+    "message": "تعذّر فتح صفحة الإعدادات. يُرجى المحاولة مجددًا."
+  }
+}

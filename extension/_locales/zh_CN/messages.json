@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "为 Twitch 弹出播放器添加聊天。"
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch（使用方法与设置）"
+  },
+  "layoutGroup": {
+    "message": "聊天布局"
+  },
+  "modeAutoTitle": {
+    "message": "根据窗口大小自动排列聊天"
+  },
+  "modeSideTitle": {
+    "message": "在右侧显示聊天"
+  },
+  "modeBottomTitle": {
+    "message": "在视频下方显示聊天"
+  },
+  "modeHideTitle": {
+    "message": "隐藏聊天"
+  },
+  "chatFrameTitle": {
+    "message": "$CHANNEL$ 的 Twitch 官方聊天",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "重新加载"
+  },
+  "reloadTitle": {
+    "message": "重新加载官方聊天"
+  },
+  "separateLabel": {
+    "message": "独立窗口"
+  },
+  "separateTitle": {
+    "message": "在独立窗口中打开官方聊天"
+  },
+  "gearEntry": {
+    "message": "弹出播放器（置顶）"
+  },
+  "errorPopupBlocked": {
+    "message": "无法打开聊天窗口。请检查此网站的弹出窗口设置。"
+  },
+  "errorVideoMissing": {
+    "message": "尚未找到视频。请先播放直播，然后重试。"
+  },
+  "errorPipUnsupported": {
+    "message": "此浏览器不支持置顶窗口。请使用 Twitch 的普通弹出播放器。"
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · 置顶",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "正在置顶窗口中播放 · 关闭该窗口后，视频将回到此处"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch 更新了播放器，视频已恢复到原位置。播放稳定后，请在播放器设置中再次选择“弹出播放器（置顶）”。"
+  },
+  "errorPipOpen": {
+    "message": "无法打开置顶窗口。请再次点击按钮，或使用 Twitch 的普通弹出播放器。"
+  },
+  "statusPageUpdated": {
+    "message": "Twitch 页面已更新，视频已恢复到原位置。"
+  },
+  "errorChatEmbed": {
+    "message": "网站阻止了嵌入式聊天。请点击“独立窗口”打开官方聊天。"
+  },
+  "helpHeading": {
+    "message": "使用方法"
+  },
+  "helpOpenInstruction": {
+    "message": "在 Twitch 直播频道页面，点击播放器的齿轮图标。"
+  },
+  "helpNativeInstruction": {
+    "message": "选择“弹出播放器”打开普通小窗口，或选择“弹出播放器（置顶）”打开置顶小窗口。"
+  },
+  "helpLayoutInstruction": {
+    "message": "在小窗口顶部选择聊天布局。"
+  },
+  "helpKeepTabInstruction": {
+    "message": "使用置顶小窗口时，请保持原 Twitch 标签页打开。关闭、重新加载原标签页或跳转到其他页面时，小窗口也会关闭。"
+  },
+  "helpRestoreNote": {
+    "message": "关闭小窗口后，视频会返回原标签页。"
+  },
+  "helpReloadNote": {
+    "message": "如果未显示此菜单项，请重新加载 Twitch 的普通直播频道页面。"
+  },
+  "helpUnofficial": {
+    "message": "本扩展为非官方扩展，并非由 Twitch 提供或认可。"
+  },
+  "consentHeading": {
+    "message": "首次使用确认"
+  },
+  "consentEnable": {
+    "message": "启用"
+  },
+  "consentLater": {
+    "message": "暂不启用"
+  },
+  "consentEnabled": {
+    "message": "已启用。可在 Twitch 直播频道页面使用。"
+  },
+  "consentDisable": {
+    "message": "停用"
+  },
+  "consentSaveError": {
+    "message": "无法保存设置，请重试。"
+  },
+  "onboardingSummary": {
+    "message": "为 Twitch 弹出播放器添加官方聊天。"
+  },
+  "consentQuestion": {
+    "message": "是否允许加载并显示 Twitch 官方聊天？"
+  },
+  "consentLocalUse": {
+    "message": "显示所需的直播页面信息仅在您的设备上使用，不会发送给开发者。"
+  },
+  "consentStored": {
+    "message": "设备上仅保存显示设置和同意记录。"
+  },
+  "consentAgreement": {
+    "message": "请阅读说明，如您同意，请点击“启用”。"
+  },
+  "consentDeferred": {
+    "message": "目前仍为停用状态。您可以随时在此页面启用。"
+  },
+  "notesHeading": {
+    "message": "备注"
+  },
+  "documentPipNote": {
+    "message": "置顶小窗口使用 Document Picture-in-Picture。本功能不会为普通的纯视频画中画添加聊天。"
+  },
+  "settingsHeading": {
+    "message": "显示功能设置"
+  },
+  "popupEnabled": {
+    "message": "已启用"
+  },
+  "popupDisabled": {
+    "message": "已停用"
+  },
+  "popupOpen": {
+    "message": "使用方法与设置"
+  },
+  "popupHint": {
+    "message": "可在专用页面完成首次使用确认并管理设置。"
+  },
+  "errorOpenSettings": {
+    "message": "无法打开设置页面。请重试。"
+  }
+}

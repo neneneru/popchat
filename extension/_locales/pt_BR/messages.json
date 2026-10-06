@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Adiciona chat às janelas pop-out da Twitch."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Ajuda e configurações)"
+  },
+  "layoutGroup": {
+    "message": "Posição do chat"
+  },
+  "modeAutoTitle": {
+    "message": "Ajustar o chat automaticamente à janela"
+  },
+  "modeSideTitle": {
+    "message": "Mostrar o chat à direita"
+  },
+  "modeBottomTitle": {
+    "message": "Mostrar o chat abaixo do vídeo"
+  },
+  "modeHideTitle": {
+    "message": "Ocultar o chat"
+  },
+  "chatFrameTitle": {
+    "message": "Chat oficial da Twitch de $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Recarregar"
+  },
+  "reloadTitle": {
+    "message": "Recarregar o chat oficial"
+  },
+  "separateLabel": {
+    "message": "Outra janela"
+  },
+  "separateTitle": {
+    "message": "Abrir o chat oficial em uma janela separada"
+  },
+  "gearEntry": {
+    "message": "Pop-out (sempre no topo)"
+  },
+  "errorPopupBlocked": {
+    "message": "Não foi possível abrir a janela do chat. Confira as configurações de pop-ups deste site."
+  },
+  "errorVideoMissing": {
+    "message": "Nenhum vídeo encontrado ainda. Inicie a transmissão e tente novamente."
+  },
+  "errorPipUnsupported": {
+    "message": "Este navegador não oferece suporte à janela sempre no topo. Use o pop-out normal da Twitch."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Sempre no topo",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Reproduzindo na janela sempre no topo · Feche-a para trazer o vídeo de volta"
+  },
+  "statusPlayerReplaced": {
+    "message": "A Twitch atualizou o player e o vídeo voltou ao lugar original. Quando a reprodução estabilizar, escolha “Pop-out (sempre no topo)” novamente nas configurações do player."
+  },
+  "errorPipOpen": {
+    "message": "Não foi possível abrir a janela sempre no topo. Clique de novo ou use o pop-out normal da Twitch."
+  },
+  "statusPageUpdated": {
+    "message": "O vídeo voltou ao lugar original porque a página da Twitch foi atualizada."
+  },
+  "errorChatEmbed": {
+    "message": "O site bloqueou o chat incorporado. Use “Outra janela” para abrir o chat oficial separadamente."
+  },
+  "helpHeading": {
+    "message": "Como usar"
+  },
+  "helpOpenInstruction": {
+    "message": "Na página de um canal ao vivo da Twitch, clique na engrenagem do player."
+  },
+  "helpNativeInstruction": {
+    "message": "Escolha “Pop-out” para uma janela normal ou “Pop-out (sempre no topo)” para mantê-la acima das outras janelas."
+  },
+  "helpLayoutInstruction": {
+    "message": "Escolha o layout do chat na parte superior da janela pequena."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Mantenha a aba original da Twitch aberta enquanto usar a janela sempre no topo. Fechar, recarregar ou mudar de página na aba original também fecha a janela pequena."
+  },
+  "helpRestoreNote": {
+    "message": "Ao fechar a janela pequena, o vídeo volta para a aba original."
+  },
+  "helpReloadNote": {
+    "message": "Se a opção não aparecer, recarregue a página normal do canal ao vivo da Twitch."
+  },
+  "helpUnofficial": {
+    "message": "Extensão não oficial, não fornecida nem aprovada pela Twitch."
+  },
+  "consentHeading": {
+    "message": "Antes de começar"
+  },
+  "consentEnable": {
+    "message": "Ativar"
+  },
+  "consentLater": {
+    "message": "Agora não"
+  },
+  "consentEnabled": {
+    "message": "Ativada. Você pode usá-la nas páginas de canais ao vivo da Twitch."
+  },
+  "consentDisable": {
+    "message": "Desativar"
+  },
+  "consentSaveError": {
+    "message": "Não foi possível salvar as configurações. Tente novamente."
+  },
+  "onboardingSummary": {
+    "message": "Adiciona o chat oficial às janelas pop-out da Twitch."
+  },
+  "consentQuestion": {
+    "message": "Você permite carregar e exibir o chat oficial da Twitch?"
+  },
+  "consentLocalUse": {
+    "message": "As informações da página da transmissão necessárias para a exibição são usadas no seu dispositivo e não são enviadas ao desenvolvedor."
+  },
+  "consentStored": {
+    "message": "Somente as configurações de exibição e sua escolha de consentimento são salvas no seu dispositivo."
+  },
+  "consentAgreement": {
+    "message": "Leia estas informações e escolha “Ativar” se concordar."
+  },
+  "consentDeferred": {
+    "message": "A extensão continua desativada. Você pode ativá-la nesta página a qualquer momento."
+  },
+  "notesHeading": {
+    "message": "Observações"
+  },
+  "documentPipNote": {
+    "message": "A janela sempre no topo usa Document Picture-in-Picture. Esta função não adiciona chat ao PiP comum, exclusivo para vídeo."
+  },
+  "settingsHeading": {
+    "message": "Configurações de exibição"
+  },
+  "popupEnabled": {
+    "message": "Ativada"
+  },
+  "popupDisabled": {
+    "message": "Desativada"
+  },
+  "popupOpen": {
+    "message": "Ajuda e configurações"
+  },
+  "popupHint": {
+    "message": "Confira as informações de consentimento inicial e gerencie as configurações na página dedicada."
+  },
+  "errorOpenSettings": {
+    "message": "Não foi possível abrir a página de configurações. Tente novamente."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Menambahkan chat ke popout Twitch."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Panduan dan pengaturan)"
+  },
+  "layoutGroup": {
+    "message": "Tata letak chat"
+  },
+  "modeAutoTitle": {
+    "message": "Atur chat otomatis sesuai ukuran jendela"
+  },
+  "modeSideTitle": {
+    "message": "Tampilkan chat di kanan"
+  },
+  "modeBottomTitle": {
+    "message": "Tampilkan chat di bawah video"
+  },
+  "modeHideTitle": {
+    "message": "Sembunyikan chat"
+  },
+  "chatFrameTitle": {
+    "message": "Chat resmi Twitch untuk $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Muat ulang"
+  },
+  "reloadTitle": {
+    "message": "Muat ulang chat resmi"
+  },
+  "separateLabel": {
+    "message": "Jendela chat"
+  },
+  "separateTitle": {
+    "message": "Buka chat resmi di jendela terpisah"
+  },
+  "gearEntry": {
+    "message": "Popout (selalu di depan)"
+  },
+  "errorPopupBlocked": {
+    "message": "Jendela chat tidak dapat dibuka. Periksa pengaturan pop-up untuk situs ini."
+  },
+  "errorVideoMissing": {
+    "message": "Video belum ditemukan. Putar siaran, lalu coba lagi."
+  },
+  "errorPipUnsupported": {
+    "message": "Browser ini tidak mendukung jendela yang selalu di depan. Gunakan popout Twitch biasa."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Selalu di depan",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Diputar di jendela yang selalu di depan · Tutup jendela itu untuk mengembalikan video ke sini"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch memperbarui pemutar, sehingga video dikembalikan. Setelah pemutaran stabil, pilih lagi “Popout (selalu di depan)” di pengaturan pemutar."
+  },
+  "errorPipOpen": {
+    "message": "Jendela yang selalu di depan tidak dapat dibuka. Tekan tombol lagi atau gunakan popout Twitch biasa."
+  },
+  "statusPageUpdated": {
+    "message": "Video dikembalikan karena halaman Twitch diperbarui."
+  },
+  "errorChatEmbed": {
+    "message": "Situs memblokir chat yang disematkan. Pilih “Jendela chat” untuk membuka chat resmi secara terpisah."
+  },
+  "helpHeading": {
+    "message": "Cara menggunakan"
+  },
+  "helpOpenInstruction": {
+    "message": "Di halaman siaran langsung Twitch, klik ikon roda gigi pada pemutar."
+  },
+  "helpNativeInstruction": {
+    "message": "Pilih “Popout” untuk jendela biasa atau “Popout (selalu di depan)” untuk jendela yang tetap berada di atas jendela lain."
+  },
+  "helpLayoutInstruction": {
+    "message": "Pilih tata letak chat di bagian atas jendela kecil."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Biarkan tab Twitch asal tetap terbuka saat memakai jendela yang selalu di depan. Menutup, memuat ulang, atau berpindah halaman di tab asal juga akan menutup jendela kecil."
+  },
+  "helpRestoreNote": {
+    "message": "Menutup jendela kecil akan mengembalikan video ke tab asal."
+  },
+  "helpReloadNote": {
+    "message": "Jika opsi tidak muncul, muat ulang halaman kanal siaran langsung Twitch yang biasa."
+  },
+  "helpUnofficial": {
+    "message": "Ekstensi tidak resmi yang tidak disediakan atau didukung secara resmi oleh Twitch."
+  },
+  "consentHeading": {
+    "message": "Sebelum mulai"
+  },
+  "consentEnable": {
+    "message": "Aktifkan"
+  },
+  "consentLater": {
+    "message": "Jangan sekarang"
+  },
+  "consentEnabled": {
+    "message": "Aktif. Anda dapat menggunakannya di halaman siaran langsung Twitch."
+  },
+  "consentDisable": {
+    "message": "Nonaktifkan"
+  },
+  "consentSaveError": {
+    "message": "Pengaturan tidak dapat disimpan. Silakan coba lagi."
+  },
+  "onboardingSummary": {
+    "message": "Menambahkan chat resmi ke popout Twitch."
+  },
+  "consentQuestion": {
+    "message": "Apakah Anda mengizinkan pemuatan dan penayangan chat resmi Twitch?"
+  },
+  "consentLocalUse": {
+    "message": "Informasi halaman siaran langsung yang diperlukan untuk tampilan digunakan di perangkat Anda dan tidak dikirim ke pengembang."
+  },
+  "consentStored": {
+    "message": "Hanya pengaturan tampilan dan pilihan persetujuan Anda yang disimpan di perangkat."
+  },
+  "consentAgreement": {
+    "message": "Baca informasi ini, lalu pilih “Aktifkan” jika Anda setuju."
+  },
+  "consentDeferred": {
+    "message": "Ekstensi masih nonaktif. Anda dapat mengaktifkannya dari halaman ini kapan saja."
+  },
+  "notesHeading": {
+    "message": "Catatan"
+  },
+  "documentPipNote": {
+    "message": "Jendela yang selalu di depan memakai Document Picture-in-Picture. Fitur ini tidak menambahkan chat ke PiP biasa yang hanya menampilkan video."
+  },
+  "settingsHeading": {
+    "message": "Pengaturan fitur tampilan"
+  },
+  "popupEnabled": {
+    "message": "Aktif"
+  },
+  "popupDisabled": {
+    "message": "Nonaktif"
+  },
+  "popupOpen": {
+    "message": "Panduan dan pengaturan"
+  },
+  "popupHint": {
+    "message": "Baca informasi persetujuan awal dan kelola pengaturan di halaman khusus."
+  },
+  "errorOpenSettings": {
+    "message": "Halaman pengaturan tidak dapat dibuka. Silakan coba lagi."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Добавляет чат в отдельные окна Twitch."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Справка и настройки)"
+  },
+  "layoutGroup": {
+    "message": "Расположение чата"
+  },
+  "modeAutoTitle": {
+    "message": "Автоматически располагать чат по размеру окна"
+  },
+  "modeSideTitle": {
+    "message": "Показывать чат справа"
+  },
+  "modeBottomTitle": {
+    "message": "Показывать чат под видео"
+  },
+  "modeHideTitle": {
+    "message": "Скрыть чат"
+  },
+  "chatFrameTitle": {
+    "message": "Официальный чат Twitch канала $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Обновить"
+  },
+  "reloadTitle": {
+    "message": "Обновить официальный чат"
+  },
+  "separateLabel": {
+    "message": "Окно чата"
+  },
+  "separateTitle": {
+    "message": "Открыть официальный чат в отдельном окне"
+  },
+  "gearEntry": {
+    "message": "Отдельное окно (поверх всех)"
+  },
+  "errorPopupBlocked": {
+    "message": "Не удалось открыть окно чата. Проверьте настройки всплывающих окон для этого сайта."
+  },
+  "errorVideoMissing": {
+    "message": "Видео пока не найдено. Запустите трансляцию и попробуйте ещё раз."
+  },
+  "errorPipUnsupported": {
+    "message": "Этот браузер не поддерживает окно поверх других окон. Используйте обычное отдельное окно Twitch."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Поверх всех окон",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Воспроизведение в окне поверх других окон · Закройте его, чтобы вернуть видео сюда"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch обновил плеер, и видео вернулось на место. Когда воспроизведение стабилизируется, снова выберите «Отдельное окно (поверх всех)» в настройках плеера."
+  },
+  "errorPipOpen": {
+    "message": "Не удалось открыть окно поверх других окон. Нажмите ещё раз или используйте обычное отдельное окно Twitch."
+  },
+  "statusPageUpdated": {
+    "message": "Видео вернулось на место, потому что страница Twitch обновилась."
+  },
+  "errorChatEmbed": {
+    "message": "Сайт заблокировал встроенный чат. Нажмите «Окно чата», чтобы открыть официальный чат отдельно."
+  },
+  "helpHeading": {
+    "message": "Как пользоваться"
+  },
+  "helpOpenInstruction": {
+    "message": "На странице прямой трансляции Twitch нажмите значок шестерёнки в плеере."
+  },
+  "helpNativeInstruction": {
+    "message": "Выберите «Отдельное окно» для обычного окна или «Отдельное окно (поверх всех)» для окна поверх остальных."
+  },
+  "helpLayoutInstruction": {
+    "message": "Выберите расположение чата в верхней части маленького окна."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Не закрывайте исходную вкладку Twitch, пока используете окно поверх остальных. Если закрыть, обновить или открыть другую страницу в исходной вкладке, маленькое окно тоже закроется."
+  },
+  "helpRestoreNote": {
+    "message": "Когда вы закроете маленькое окно, видео вернётся в исходную вкладку."
+  },
+  "helpReloadNote": {
+    "message": "Если пункт меню не виден, обновите обычную страницу канала с прямой трансляцией Twitch."
+  },
+  "helpUnofficial": {
+    "message": "Неофициальное расширение, не предоставленное и не одобренное Twitch."
+  },
+  "consentHeading": {
+    "message": "Перед первым использованием"
+  },
+  "consentEnable": {
+    "message": "Включить"
+  },
+  "consentLater": {
+    "message": "Не сейчас"
+  },
+  "consentEnabled": {
+    "message": "Включено. Можно использовать на страницах прямых трансляций Twitch."
+  },
+  "consentDisable": {
+    "message": "Отключить"
+  },
+  "consentSaveError": {
+    "message": "Не удалось сохранить настройки. Попробуйте ещё раз."
+  },
+  "onboardingSummary": {
+    "message": "Добавляет официальный чат в отдельные окна Twitch."
+  },
+  "consentQuestion": {
+    "message": "Разрешить загрузку и отображение официального чата Twitch?"
+  },
+  "consentLocalUse": {
+    "message": "Информация со страницы трансляции, необходимая для отображения, используется на вашем устройстве и не передаётся разработчику."
+  },
+  "consentStored": {
+    "message": "На устройстве сохраняются только настройки отображения и ваш выбор о согласии."
+  },
+  "consentAgreement": {
+    "message": "Прочитайте эту информацию и выберите «Включить», если согласны."
+  },
+  "consentDeferred": {
+    "message": "Расширение остаётся отключённым. Вы можете включить его на этой странице в любое время."
+  },
+  "notesHeading": {
+    "message": "Примечания"
+  },
+  "documentPipNote": {
+    "message": "Окно поверх остальных использует Document Picture-in-Picture. Эта функция не добавляет чат в обычный PiP, предназначенный только для видео."
+  },
+  "settingsHeading": {
+    "message": "Настройки отображения"
+  },
+  "popupEnabled": {
+    "message": "Включено"
+  },
+  "popupDisabled": {
+    "message": "Отключено"
+  },
+  "popupOpen": {
+    "message": "Справка и настройки"
+  },
+  "popupHint": {
+    "message": "Ознакомиться с информацией о согласии и изменить настройки можно на отдельной странице."
+  },
+  "errorOpenSettings": {
+    "message": "Не удалось открыть страницу настроек. Попробуйте ещё раз."
+  }
+}

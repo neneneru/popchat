@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PopChat for Twitch</title><link rel="stylesheet" href="onboarding.css"><script src="i18n.js" defer></script><script src="onboarding.js" defer></script></head>
+<body><main class="page">
+<header class="brand"><img src="icons/icon48.png" alt="" width="40" height="40"><div><h1 data-i18n="extensionName"></h1><p class="summary" data-i18n="onboardingSummary"></p></div></header>
+<section class="consent-card" id="consent-prompt" aria-labelledby="consent-heading" hidden>
+<h2 id="consent-heading" data-i18n="consentHeading"></h2><p class="question" data-i18n="consentQuestion"></p>
+<ul class="privacy-points"><li data-i18n="consentLocalUse"></li><li data-i18n="consentStored"></li></ul>
+<p class="agreement" data-i18n="consentAgreement"></p><div class="actions"><button class="primary" id="consent-enable" type="button" data-i18n="consentEnable"></button><button id="consent-later" type="button" data-i18n="consentLater"></button></div>
+</section>
+<section class="active-card" id="consent-active" aria-labelledby="settings-heading" hidden><div><h2 id="settings-heading" data-i18n="settingsHeading"></h2><p data-i18n="consentEnabled"></p></div><button id="consent-disable" type="button" data-i18n="consentDisable"></button></section>
+<p id="consent-status" role="status" aria-live="polite"></p>
+<section class="usage" aria-labelledby="usage-heading"><h2 id="usage-heading" data-i18n="helpHeading"></h2><ol class="steps"><li data-i18n="helpOpenInstruction"></li><li data-i18n="helpNativeInstruction"></li><li data-i18n="helpLayoutInstruction"></li></ol>
+<dl class="controls"><div><dt>AUTO</dt><dd data-i18n="modeAutoTitle"></dd></div><div><dt>SIDE</dt><dd data-i18n="modeSideTitle"></dd></div><div><dt>BOTTOM</dt><dd data-i18n="modeBottomTitle"></dd></div><div><dt>HIDE</dt><dd data-i18n="modeHideTitle"></dd></div><div><dt data-i18n="reloadLabel"></dt><dd data-i18n="reloadTitle"></dd></div><div><dt data-i18n="separateLabel"></dt><dd data-i18n="separateTitle"></dd></div></dl></section>
+<section class="notes" aria-labelledby="notes-heading"><h2 id="notes-heading" data-i18n="notesHeading"></h2><ul><li data-i18n="helpKeepTabInstruction"></li><li data-i18n="helpRestoreNote"></li><li data-i18n="documentPipNote"></li><li data-i18n="helpReloadNote"></li></ul></section>
+<footer><p data-i18n="helpUnofficial"></p><span id="version"></span></footer>
+</main></body></html>

@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Twitchのポップアウトにチャットを追加します。"
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch（使い方・設定）"
+  },
+  "layoutGroup": {
+    "message": "チャットの配置"
+  },
+  "modeAutoTitle": {
+    "message": "ウィンドウに合わせて自動配置"
+  },
+  "modeSideTitle": {
+    "message": "チャットを右側に表示"
+  },
+  "modeBottomTitle": {
+    "message": "チャットを下側に表示"
+  },
+  "modeHideTitle": {
+    "message": "チャットを非表示"
+  },
+  "chatFrameTitle": {
+    "message": "$CHANNEL$ の公式Twitchチャット",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "再読込"
+  },
+  "reloadTitle": {
+    "message": "公式チャットを再読み込み"
+  },
+  "separateLabel": {
+    "message": "別窓"
+  },
+  "separateTitle": {
+    "message": "公式チャットだけを別ウィンドウで開く"
+  },
+  "gearEntry": {
+    "message": "ポップアウト（最前面）"
+  },
+  "errorPopupBlocked": {
+    "message": "別窓を開けませんでした。このサイトのポップアップ設定を確認してください。"
+  },
+  "errorVideoMissing": {
+    "message": "映像がまだ見つかりません。配信の再生後にもう一度押してください。"
+  },
+  "errorPipUnsupported": {
+    "message": "最前面の小窓に対応していません。通常のポップアウトを使ってください。"
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · 最前面",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "最前面ウィンドウで再生中 · 小窓を閉じると元に戻ります"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitchがプレイヤーを更新したため映像を戻しました。再生が落ち着いたら歯車の「ポップアウト（最前面）」を押してください。"
+  },
+  "errorPipOpen": {
+    "message": "最前面の小窓を開けませんでした。ボタンをもう一度押すか、ポップアウトを使ってください。"
+  },
+  "statusPageUpdated": {
+    "message": "Twitchのページが更新されたため映像を戻しました。"
+  },
+  "errorChatEmbed": {
+    "message": "サイトの制限で埋め込みを表示できません。「別窓」で公式チャットを開いてください。"
+  },
+  "helpHeading": {
+    "message": "使い方"
+  },
+  "helpOpenInstruction": {
+    "message": "Twitchの配信ページで、プレイヤーの歯車アイコンをクリックします。"
+  },
+  "helpNativeInstruction": {
+    "message": "「ポップアウト」で通常の小窓を、「ポップアウト（最前面）」で常に手前に表示される小窓を開きます。"
+  },
+  "helpLayoutInstruction": {
+    "message": "小窓の上部で、チャットの配置を選びます。"
+  },
+  "helpKeepTabInstruction": {
+    "message": "最前面の小窓を使う間は、元のTwitchタブを開いたままにしてください。元のタブを閉じる、再読み込みする、別のページに移動すると、小窓も閉じます。"
+  },
+  "helpRestoreNote": {
+    "message": "小窓を閉じると、映像が元のタブに戻ります。"
+  },
+  "helpReloadNote": {
+    "message": "項目が見えない場合は、Twitchの通常配信ページを再読み込みしてください。"
+  },
+  "helpUnofficial": {
+    "message": "Twitchが提供・公認するものではない、非公式の拡張機能です。"
+  },
+  "consentHeading": {
+    "message": "初回の確認"
+  },
+  "consentEnable": {
+    "message": "有効にする"
+  },
+  "consentLater": {
+    "message": "今はしない"
+  },
+  "consentEnabled": {
+    "message": "有効です。Twitchの配信ページで使えます。"
+  },
+  "consentDisable": {
+    "message": "無効にする"
+  },
+  "consentSaveError": {
+    "message": "設定を保存できませんでした。もう一度お試しください。"
+  },
+  "onboardingSummary": {
+    "message": "Twitchのポップアウトに公式チャットを追加します。"
+  },
+  "consentQuestion": {
+    "message": "Twitchの公式チャットを読み込んで表示してもよろしいですか？"
+  },
+  "consentLocalUse": {
+    "message": "表示に必要な配信ページの情報は端末内で使い、開発者には送信しません。"
+  },
+  "consentStored": {
+    "message": "端末に保存するのは、表示設定と同意の記録だけです。"
+  },
+  "consentAgreement": {
+    "message": "内容を確認し、同意いただける場合は「有効にする」を押してください。"
+  },
+  "consentDeferred": {
+    "message": "今は無効のままです。このページから、いつでも有効にできます。"
+  },
+  "notesHeading": {
+    "message": "備考"
+  },
+  "documentPipNote": {
+    "message": "最前面の小窓にはDocument Picture-in-Pictureを使います。通常の動画専用PiPにチャットを追加する機能ではありません。"
+  },
+  "settingsHeading": {
+    "message": "表示機能の設定"
+  },
+  "popupEnabled": {
+    "message": "有効です"
+  },
+  "popupDisabled": {
+    "message": "無効です"
+  },
+  "popupOpen": {
+    "message": "使い方・設定"
+  },
+  "popupHint": {
+    "message": "初回の確認や設定は、専用ページで行えます。"
+  },
+  "errorOpenSettings": {
+    "message": "設定ページを開けませんでした。もう一度お試しください。"
+  }
+}

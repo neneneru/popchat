@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Ajoute le chat aux fenêtres détachées de Twitch."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Aide et réglages)"
+  },
+  "layoutGroup": {
+    "message": "Disposition du chat"
+  },
+  "modeAutoTitle": {
+    "message": "Adapter automatiquement le chat à la fenêtre"
+  },
+  "modeSideTitle": {
+    "message": "Afficher le chat à droite"
+  },
+  "modeBottomTitle": {
+    "message": "Afficher le chat sous la vidéo"
+  },
+  "modeHideTitle": {
+    "message": "Masquer le chat"
+  },
+  "chatFrameTitle": {
+    "message": "Chat officiel Twitch de $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Recharger"
+  },
+  "reloadTitle": {
+    "message": "Recharger le chat officiel"
+  },
+  "separateLabel": {
+    "message": "Autre fenêtre"
+  },
+  "separateTitle": {
+    "message": "Ouvrir le chat officiel dans une fenêtre séparée"
+  },
+  "gearEntry": {
+    "message": "Fenêtre détachée (au premier plan)"
+  },
+  "errorPopupBlocked": {
+    "message": "Impossible d’ouvrir la fenêtre de chat. Vérifiez les paramètres de fenêtres pop-up de ce site."
+  },
+  "errorVideoMissing": {
+    "message": "Aucune vidéo trouvée pour le moment. Lancez le direct, puis réessayez."
+  },
+  "errorPipUnsupported": {
+    "message": "Ce navigateur ne prend pas en charge la fenêtre au premier plan. Utilisez la fenêtre détachée habituelle de Twitch."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Au premier plan",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Lecture dans la fenêtre au premier plan · Fermez-la pour ramener la vidéo ici"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch a actualisé le lecteur et la vidéo a été remise à sa place. Une fois la lecture stabilisée, choisissez à nouveau « Fenêtre détachée (au premier plan) » dans les réglages du lecteur."
+  },
+  "errorPipOpen": {
+    "message": "Impossible d’ouvrir la fenêtre au premier plan. Cliquez à nouveau ou utilisez la fenêtre détachée habituelle de Twitch."
+  },
+  "statusPageUpdated": {
+    "message": "La vidéo a été remise à sa place, car la page Twitch a été actualisée."
+  },
+  "errorChatEmbed": {
+    "message": "Le site a bloqué le chat intégré. Utilisez « Autre fenêtre » pour ouvrir le chat officiel séparément."
+  },
+  "helpHeading": {
+    "message": "Utilisation"
+  },
+  "helpOpenInstruction": {
+    "message": "Sur la page d’une chaîne Twitch en direct, cliquez sur la roue dentée du lecteur."
+  },
+  "helpNativeInstruction": {
+    "message": "Choisissez « Fenêtre détachée » pour une fenêtre normale ou « Fenêtre détachée (au premier plan) » pour la garder au-dessus des autres fenêtres."
+  },
+  "helpLayoutInstruction": {
+    "message": "Choisissez la disposition du chat en haut de la petite fenêtre."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Gardez l’onglet Twitch d’origine ouvert pendant l’utilisation de la fenêtre au premier plan. Fermer, recharger ou changer de page dans cet onglet ferme aussi la petite fenêtre."
+  },
+  "helpRestoreNote": {
+    "message": "Fermer la petite fenêtre remet la vidéo dans l’onglet d’origine."
+  },
+  "helpReloadNote": {
+    "message": "Si l’option est absente, rechargez la page habituelle de la chaîne en direct sur Twitch."
+  },
+  "helpUnofficial": {
+    "message": "Extension non officielle, ni fournie ni approuvée par Twitch."
+  },
+  "consentHeading": {
+    "message": "Avant de commencer"
+  },
+  "consentEnable": {
+    "message": "Activer"
+  },
+  "consentLater": {
+    "message": "Pas maintenant"
+  },
+  "consentEnabled": {
+    "message": "Activée. Vous pouvez l’utiliser sur les pages des chaînes Twitch en direct."
+  },
+  "consentDisable": {
+    "message": "Désactiver"
+  },
+  "consentSaveError": {
+    "message": "Impossible d’enregistrer les réglages. Veuillez réessayer."
+  },
+  "onboardingSummary": {
+    "message": "Ajoute le chat officiel aux fenêtres détachées de Twitch."
+  },
+  "consentQuestion": {
+    "message": "Autorisez-vous le chargement et l’affichage du chat officiel de Twitch ?"
+  },
+  "consentLocalUse": {
+    "message": "Les informations de la page du direct nécessaires à l’affichage sont utilisées sur votre appareil et ne sont pas envoyées au développeur."
+  },
+  "consentStored": {
+    "message": "Seuls les réglages d’affichage et votre choix de consentement sont enregistrés sur votre appareil."
+  },
+  "consentAgreement": {
+    "message": "Lisez ces informations et choisissez « Activer » si vous êtes d’accord."
+  },
+  "consentDeferred": {
+    "message": "L’extension reste désactivée. Vous pouvez l’activer à tout moment depuis cette page."
+  },
+  "notesHeading": {
+    "message": "Remarques"
+  },
+  "documentPipNote": {
+    "message": "La fenêtre au premier plan utilise Document Picture-in-Picture. Cette fonction n’ajoute pas de chat au PiP classique réservé à la vidéo."
+  },
+  "settingsHeading": {
+    "message": "Réglages des fonctions d’affichage"
+  },
+  "popupEnabled": {
+    "message": "Activée"
+  },
+  "popupDisabled": {
+    "message": "Désactivée"
+  },
+  "popupOpen": {
+    "message": "Aide et réglages"
+  },
+  "popupHint": {
+    "message": "Consultez les informations de consentement initial et gérez les réglages sur la page dédiée."
+  },
+  "errorOpenSettings": {
+    "message": "Impossible d’ouvrir la page des réglages. Veuillez réessayer."
+  }
+}

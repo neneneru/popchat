@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Añade chat a las ventanas emergentes de Twitch."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Ayuda y ajustes)"
+  },
+  "layoutGroup": {
+    "message": "Disposición del chat"
+  },
+  "modeAutoTitle": {
+    "message": "Adaptar el chat automáticamente a la ventana"
+  },
+  "modeSideTitle": {
+    "message": "Mostrar el chat a la derecha"
+  },
+  "modeBottomTitle": {
+    "message": "Mostrar el chat debajo del vídeo"
+  },
+  "modeHideTitle": {
+    "message": "Ocultar el chat"
+  },
+  "chatFrameTitle": {
+    "message": "Chat oficial de Twitch de $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Recargar"
+  },
+  "reloadTitle": {
+    "message": "Recargar el chat oficial"
+  },
+  "separateLabel": {
+    "message": "Otra ventana"
+  },
+  "separateTitle": {
+    "message": "Abrir el chat oficial en una ventana aparte"
+  },
+  "gearEntry": {
+    "message": "Ventana emergente (siempre visible)"
+  },
+  "errorPopupBlocked": {
+    "message": "No se pudo abrir la ventana del chat. Revisa la configuración de ventanas emergentes de este sitio."
+  },
+  "errorVideoMissing": {
+    "message": "Aún no se ha encontrado ningún vídeo. Inicia la transmisión y vuelve a intentarlo."
+  },
+  "errorPipUnsupported": {
+    "message": "Este navegador no admite la ventana siempre visible. Usa la ventana emergente normal de Twitch."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Siempre visible",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Reproduciendo en la ventana siempre visible · Ciérrala para devolver el vídeo aquí"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch actualizó el reproductor y el vídeo volvió a su lugar. Cuando la reproducción se estabilice, elige de nuevo “Ventana emergente (siempre visible)” en los ajustes del reproductor."
+  },
+  "errorPipOpen": {
+    "message": "No se pudo abrir la ventana siempre visible. Vuelve a pulsar el botón o usa la ventana emergente normal de Twitch."
+  },
+  "statusPageUpdated": {
+    "message": "El vídeo volvió a su lugar porque la página de Twitch se actualizó."
+  },
+  "errorChatEmbed": {
+    "message": "El sitio bloqueó el chat integrado. Pulsa “Otra ventana” para abrir el chat oficial por separado."
+  },
+  "helpHeading": {
+    "message": "Cómo usarlo"
+  },
+  "helpOpenInstruction": {
+    "message": "En la página de un canal de Twitch en directo, haz clic en la rueda dentada del reproductor."
+  },
+  "helpNativeInstruction": {
+    "message": "Elige “Ventana emergente” para una ventana normal o “Ventana emergente (siempre visible)” para mantenerla por encima de las demás."
+  },
+  "helpLayoutInstruction": {
+    "message": "Elige la disposición del chat en la parte superior de la ventana pequeña."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Mantén abierta la pestaña original de Twitch mientras uses la ventana siempre visible. Si cierras, recargas o cambias de página en la pestaña original, la ventana pequeña también se cierra."
+  },
+  "helpRestoreNote": {
+    "message": "Al cerrar la ventana pequeña, el vídeo vuelve a la pestaña original."
+  },
+  "helpReloadNote": {
+    "message": "Si no aparece la opción, recarga la página normal del canal en directo de Twitch."
+  },
+  "helpUnofficial": {
+    "message": "Extensión no oficial, no proporcionada ni avalada por Twitch."
+  },
+  "consentHeading": {
+    "message": "Antes de empezar"
+  },
+  "consentEnable": {
+    "message": "Activar"
+  },
+  "consentLater": {
+    "message": "Ahora no"
+  },
+  "consentEnabled": {
+    "message": "Activada. Puedes usarla en las páginas de canales de Twitch en directo."
+  },
+  "consentDisable": {
+    "message": "Desactivar"
+  },
+  "consentSaveError": {
+    "message": "No se han podido guardar los ajustes. Inténtalo de nuevo."
+  },
+  "onboardingSummary": {
+    "message": "Añade el chat oficial a las ventanas emergentes de Twitch."
+  },
+  "consentQuestion": {
+    "message": "¿Permites cargar y mostrar el chat oficial de Twitch?"
+  },
+  "consentLocalUse": {
+    "message": "La información de la página del directo necesaria para la visualización se usa en tu dispositivo y no se envía al desarrollador."
+  },
+  "consentStored": {
+    "message": "Solo se guardan en tu dispositivo los ajustes de visualización y tu decisión de consentimiento."
+  },
+  "consentAgreement": {
+    "message": "Revisa esta información y elige “Activar” si estás de acuerdo."
+  },
+  "consentDeferred": {
+    "message": "La extensión sigue desactivada. Puedes activarla desde esta página en cualquier momento."
+  },
+  "notesHeading": {
+    "message": "Notas"
+  },
+  "documentPipNote": {
+    "message": "La ventana siempre visible usa Document Picture-in-Picture. Esta función no añade chat al PiP normal que solo muestra vídeo."
+  },
+  "settingsHeading": {
+    "message": "Ajustes de visualización"
+  },
+  "popupEnabled": {
+    "message": "Activada"
+  },
+  "popupDisabled": {
+    "message": "Desactivada"
+  },
+  "popupOpen": {
+    "message": "Ayuda y ajustes"
+  },
+  "popupHint": {
+    "message": "Revisa la información de consentimiento inicial y gestiona los ajustes en la página dedicada."
+  },
+  "errorOpenSettings": {
+    "message": "No se pudo abrir la página de ajustes. Inténtalo de nuevo."
+  }
+}

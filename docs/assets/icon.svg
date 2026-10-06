@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+<title>PopChat for Twitch — original pop-out icon</title>
+<desc>Purple tile with a single white outline glyph combining an open chat window and upward pop-out arrow. Original geometry, not a Twitch logo.</desc>
+<rect x="16" y="16" width="96" height="96" rx="24" fill="#9146FF"/>
+<g fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M61 39H43A9 9 0 0 0 34 48V76A9 9 0 0 0 43 85H48V96L61 85H85A9 9 0 0 0 94 76V70"/>
+<path d="M74 34H96V56M95 35L66 64"/>
+</g>
+</svg>

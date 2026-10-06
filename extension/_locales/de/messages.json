@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Fügt Twitch-Popouts einen Chat hinzu."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Hilfe und Einstellungen)"
+  },
+  "layoutGroup": {
+    "message": "Chat-Anordnung"
+  },
+  "modeAutoTitle": {
+    "message": "Chat automatisch an das Fenster anpassen"
+  },
+  "modeSideTitle": {
+    "message": "Chat rechts anzeigen"
+  },
+  "modeBottomTitle": {
+    "message": "Chat unter dem Video anzeigen"
+  },
+  "modeHideTitle": {
+    "message": "Chat ausblenden"
+  },
+  "chatFrameTitle": {
+    "message": "Offizieller Twitch-Chat für $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Neu laden"
+  },
+  "reloadTitle": {
+    "message": "Offiziellen Chat neu laden"
+  },
+  "separateLabel": {
+    "message": "Chatfenster"
+  },
+  "separateTitle": {
+    "message": "Offiziellen Chat in einem separaten Fenster öffnen"
+  },
+  "gearEntry": {
+    "message": "Popout (immer im Vordergrund)"
+  },
+  "errorPopupBlocked": {
+    "message": "Das Chatfenster konnte nicht geöffnet werden. Prüfe die Pop-up-Einstellungen für diese Website."
+  },
+  "errorVideoMissing": {
+    "message": "Noch kein Video gefunden. Starte den Stream und versuche es erneut."
+  },
+  "errorPipUnsupported": {
+    "message": "Dieser Browser unterstützt das Fenster im Vordergrund nicht. Verwende das normale Twitch-Popout."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Immer im Vordergrund",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Wiedergabe im Vordergrundfenster · Schließe es, um das Video hierher zurückzuholen"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch hat den Player aktualisiert. Das Video ist wieder im ursprünglichen Tab. Sobald die Wiedergabe stabil ist, wähle in den Player-Einstellungen erneut „Popout (immer im Vordergrund)“."
+  },
+  "errorPipOpen": {
+    "message": "Das Fenster im Vordergrund konnte nicht geöffnet werden. Klicke erneut oder verwende das normale Twitch-Popout."
+  },
+  "statusPageUpdated": {
+    "message": "Die Twitch-Seite wurde aktualisiert. Das Video ist wieder im ursprünglichen Tab."
+  },
+  "errorChatEmbed": {
+    "message": "Die Website blockiert den eingebetteten Chat. Öffne den offiziellen Chat über „Chatfenster“ separat."
+  },
+  "helpHeading": {
+    "message": "Verwendung"
+  },
+  "helpOpenInstruction": {
+    "message": "Klicke auf einer Twitch-Livestream-Seite auf das Zahnrad im Player."
+  },
+  "helpNativeInstruction": {
+    "message": "Wähle „Popout“ für ein normales kleines Fenster oder „Popout (immer im Vordergrund)“ für ein Fenster, das über anderen Fenstern bleibt."
+  },
+  "helpLayoutInstruction": {
+    "message": "Wähle oben im kleinen Fenster die Anordnung des Chats."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Lass den ursprünglichen Twitch-Tab geöffnet, solange du das Vordergrundfenster verwendest. Wenn du den Tab schließt, neu lädst oder zu einer anderen Seite wechselst, schließt sich auch das kleine Fenster."
+  },
+  "helpRestoreNote": {
+    "message": "Wenn du das kleine Fenster schließt, kehrt das Video zum ursprünglichen Tab zurück."
+  },
+  "helpReloadNote": {
+    "message": "Fehlt der Menüpunkt, lade die normale Live-Kanalseite von Twitch neu."
+  },
+  "helpUnofficial": {
+    "message": "Eine inoffizielle Erweiterung, die nicht von Twitch bereitgestellt oder empfohlen wird."
+  },
+  "consentHeading": {
+    "message": "Vor dem ersten Start"
+  },
+  "consentEnable": {
+    "message": "Aktivieren"
+  },
+  "consentLater": {
+    "message": "Jetzt nicht"
+  },
+  "consentEnabled": {
+    "message": "Aktiviert. Du kannst die Erweiterung auf Twitch-Livestream-Seiten verwenden."
+  },
+  "consentDisable": {
+    "message": "Deaktivieren"
+  },
+  "consentSaveError": {
+    "message": "Die Einstellungen konnten nicht gespeichert werden. Bitte versuche es erneut."
+  },
+  "onboardingSummary": {
+    "message": "Fügt Twitch-Popouts den offiziellen Chat hinzu."
+  },
+  "consentQuestion": {
+    "message": "Darf die Erweiterung den offiziellen Twitch-Chat laden und anzeigen?"
+  },
+  "consentLocalUse": {
+    "message": "Informationen der Livestream-Seite, die für die Anzeige benötigt werden, werden auf deinem Gerät verwendet und nicht an den Entwickler gesendet."
+  },
+  "consentStored": {
+    "message": "Nur Anzeigeeinstellungen und deine Einwilligung werden auf deinem Gerät gespeichert."
+  },
+  "consentAgreement": {
+    "message": "Lies diese Hinweise und wähle „Aktivieren“, wenn du einverstanden bist."
+  },
+  "consentDeferred": {
+    "message": "Die Erweiterung bleibt deaktiviert. Du kannst sie jederzeit auf dieser Seite aktivieren."
+  },
+  "notesHeading": {
+    "message": "Hinweise"
+  },
+  "documentPipNote": {
+    "message": "Das Vordergrundfenster verwendet Document Picture-in-Picture. Der normale PiP-Modus für Videos wird dadurch nicht um einen Chat ergänzt."
+  },
+  "settingsHeading": {
+    "message": "Einstellungen der Anzeigefunktionen"
+  },
+  "popupEnabled": {
+    "message": "Aktiviert"
+  },
+  "popupDisabled": {
+    "message": "Deaktiviert"
+  },
+  "popupOpen": {
+    "message": "Hilfe und Einstellungen"
+  },
+  "popupHint": {
+    "message": "Die Hinweise zur ersten Aktivierung und die Einstellungen findest du auf einer eigenen Seite."
+  },
+  "errorOpenSettings": {
+    "message": "Die Einstellungsseite konnte nicht geöffnet werden. Bitte versuche es erneut."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Twitch 팝아웃에 채팅을 추가합니다."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (사용 방법 및 설정)"
+  },
+  "layoutGroup": {
+    "message": "채팅 배치"
+  },
+  "modeAutoTitle": {
+    "message": "창 크기에 맞게 채팅 자동 배치"
+  },
+  "modeSideTitle": {
+    "message": "채팅을 오른쪽에 표시"
+  },
+  "modeBottomTitle": {
+    "message": "채팅을 영상 아래에 표시"
+  },
+  "modeHideTitle": {
+    "message": "채팅 숨기기"
+  },
+  "chatFrameTitle": {
+    "message": "$CHANNEL$의 공식 Twitch 채팅",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "새로고침"
+  },
+  "reloadTitle": {
+    "message": "공식 채팅 새로고침"
+  },
+  "separateLabel": {
+    "message": "별도 창"
+  },
+  "separateTitle": {
+    "message": "공식 채팅만 별도 창으로 열기"
+  },
+  "gearEntry": {
+    "message": "팝아웃 (항상 위)"
+  },
+  "errorPopupBlocked": {
+    "message": "채팅 창을 열지 못했습니다. 이 사이트의 팝업 설정을 확인하세요."
+  },
+  "errorVideoMissing": {
+    "message": "아직 영상을 찾지 못했습니다. 방송을 재생한 뒤 다시 눌러 주세요."
+  },
+  "errorPipUnsupported": {
+    "message": "이 브라우저는 항상 위에 표시되는 창을 지원하지 않습니다. Twitch의 일반 팝아웃을 이용하세요."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · 항상 위",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "항상 위에 표시되는 창에서 재생 중 · 해당 창을 닫으면 영상이 돌아옵니다"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch가 플레이어를 업데이트하여 영상을 원래 위치로 되돌렸습니다. 재생이 안정되면 설정에서 “팝아웃 (항상 위)”을 다시 선택하세요."
+  },
+  "errorPipOpen": {
+    "message": "항상 위에 표시되는 창을 열지 못했습니다. 다시 누르거나 Twitch의 일반 팝아웃을 이용하세요."
+  },
+  "statusPageUpdated": {
+    "message": "Twitch 페이지가 업데이트되어 영상을 원래 위치로 되돌렸습니다."
+  },
+  "errorChatEmbed": {
+    "message": "사이트에서 임베드 채팅을 차단했습니다. “별도 창”으로 공식 채팅을 여세요."
+  },
+  "helpHeading": {
+    "message": "사용 방법"
+  },
+  "helpOpenInstruction": {
+    "message": "Twitch 생방송 채널 페이지에서 플레이어의 톱니바퀴 아이콘을 클릭하세요."
+  },
+  "helpNativeInstruction": {
+    "message": "“팝아웃”을 선택하면 일반 창이, “팝아웃 (항상 위)”을 선택하면 항상 위에 표시되는 창이 열립니다."
+  },
+  "helpLayoutInstruction": {
+    "message": "작은 창 상단에서 채팅 배치를 선택하세요."
+  },
+  "helpKeepTabInstruction": {
+    "message": "항상 위에 표시되는 창을 사용하는 동안 원래 Twitch 탭을 열어 두세요. 원래 탭을 닫거나 새로고침하거나 다른 페이지로 이동하면 작은 창도 닫힙니다."
+  },
+  "helpRestoreNote": {
+    "message": "작은 창을 닫으면 영상이 원래 탭으로 돌아갑니다."
+  },
+  "helpReloadNote": {
+    "message": "메뉴 항목이 보이지 않으면 Twitch의 일반 생방송 채널 페이지를 새로고침하세요."
+  },
+  "helpUnofficial": {
+    "message": "Twitch에서 제공하거나 공인하지 않은 비공식 확장 프로그램입니다."
+  },
+  "consentHeading": {
+    "message": "처음 사용하기 전 확인"
+  },
+  "consentEnable": {
+    "message": "활성화"
+  },
+  "consentLater": {
+    "message": "지금은 안 함"
+  },
+  "consentEnabled": {
+    "message": "활성화되어 있습니다. Twitch 생방송 채널 페이지에서 사용할 수 있습니다."
+  },
+  "consentDisable": {
+    "message": "비활성화"
+  },
+  "consentSaveError": {
+    "message": "설정을 저장하지 못했습니다. 다시 시도해 주세요."
+  },
+  "onboardingSummary": {
+    "message": "Twitch 팝아웃에 공식 채팅을 추가합니다."
+  },
+  "consentQuestion": {
+    "message": "Twitch 공식 채팅을 불러와 표시해도 될까요?"
+  },
+  "consentLocalUse": {
+    "message": "표시에 필요한 생방송 페이지 정보는 기기 내에서 사용하며 개발자에게 전송하지 않습니다."
+  },
+  "consentStored": {
+    "message": "기기에는 표시 설정과 동의 기록만 저장합니다."
+  },
+  "consentAgreement": {
+    "message": "내용을 확인하고 동의하시면 “활성화”를 누르세요."
+  },
+  "consentDeferred": {
+    "message": "아직 비활성화 상태입니다. 이 페이지에서 언제든지 활성화할 수 있습니다."
+  },
+  "notesHeading": {
+    "message": "참고"
+  },
+  "documentPipNote": {
+    "message": "항상 위에 표시되는 창에는 Document Picture-in-Picture를 사용합니다. 일반적인 영상 전용 PiP에 채팅을 추가하는 기능은 아닙니다."
+  },
+  "settingsHeading": {
+    "message": "표시 기능 설정"
+  },
+  "popupEnabled": {
+    "message": "활성화됨"
+  },
+  "popupDisabled": {
+    "message": "비활성화됨"
+  },
+  "popupOpen": {
+    "message": "사용 방법 및 설정"
+  },
+  "popupHint": {
+    "message": "전용 페이지에서 처음 사용하기 전 안내를 확인하고 설정을 관리할 수 있습니다."
+  },
+  "errorOpenSettings": {
+    "message": "설정 페이지를 열지 못했습니다. 다시 시도해 주세요."
+  }
+}

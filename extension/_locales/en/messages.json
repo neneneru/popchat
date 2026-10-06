@@ -1,0 +1,170 @@
+{
+  "extensionName": {
+    "message": "PopChat for Twitch"
+  },
+  "panelLabel": {
+    "message": "PopChat for Twitch"
+  },
+  "extensionDescription": {
+    "message": "Adds chat to Twitch popouts."
+  },
+  "actionTitle": {
+    "message": "PopChat for Twitch (Help and settings)"
+  },
+  "layoutGroup": {
+    "message": "Chat layout"
+  },
+  "modeAutoTitle": {
+    "message": "Arrange chat automatically to fit the window"
+  },
+  "modeSideTitle": {
+    "message": "Show chat on the right"
+  },
+  "modeBottomTitle": {
+    "message": "Show chat below the video"
+  },
+  "modeHideTitle": {
+    "message": "Hide chat"
+  },
+  "chatFrameTitle": {
+    "message": "Official Twitch chat for $CHANNEL$",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "reloadLabel": {
+    "message": "Reload"
+  },
+  "reloadTitle": {
+    "message": "Reload official chat"
+  },
+  "separateLabel": {
+    "message": "Chat window"
+  },
+  "separateTitle": {
+    "message": "Open official chat in a separate window"
+  },
+  "gearEntry": {
+    "message": "Popout (always on top)"
+  },
+  "errorPopupBlocked": {
+    "message": "The chat window could not open. Check this site’s popup settings."
+  },
+  "errorVideoMissing": {
+    "message": "No video found yet. Start the stream, then try again."
+  },
+  "errorPipUnsupported": {
+    "message": "This browser does not support the always-on-top window. Use Twitch’s regular popout instead."
+  },
+  "pipWindowTitle": {
+    "message": "$CHANNEL$ · Always on top",
+    "placeholders": {
+      "channel": {
+        "content": "$1",
+        "example": "example_channel"
+      }
+    }
+  },
+  "pipPlaceholder": {
+    "message": "Playing in the always-on-top window · Close that window to return the video here"
+  },
+  "statusPlayerReplaced": {
+    "message": "Twitch updated the player, so the video was returned. Once playback settles, choose “Popout (always on top)” in the player settings again."
+  },
+  "errorPipOpen": {
+    "message": "The always-on-top window could not open. Try the button again or use Twitch’s regular popout."
+  },
+  "statusPageUpdated": {
+    "message": "The video was returned because the Twitch page updated."
+  },
+  "errorChatEmbed": {
+    "message": "The site blocked embedded chat. Use “Chat window” to open official chat separately."
+  },
+  "helpHeading": {
+    "message": "How to use"
+  },
+  "helpOpenInstruction": {
+    "message": "On a Twitch live channel page, click the player’s settings gear."
+  },
+  "helpNativeInstruction": {
+    "message": "Choose “Popout” for a regular window or “Popout (always on top)” for an always-on-top window."
+  },
+  "helpLayoutInstruction": {
+    "message": "Choose the chat layout at the top of the small window."
+  },
+  "helpKeepTabInstruction": {
+    "message": "Keep the original Twitch tab open while using the always-on-top window. Closing, reloading or navigating away from the original tab also closes the small window."
+  },
+  "helpRestoreNote": {
+    "message": "Closing the small window returns the video to the original tab."
+  },
+  "helpReloadNote": {
+    "message": "If the menu item is missing, reload the regular Twitch live channel page."
+  },
+  "helpUnofficial": {
+    "message": "An unofficial extension, not provided or endorsed by Twitch."
+  },
+  "consentHeading": {
+    "message": "Before you start"
+  },
+  "consentEnable": {
+    "message": "Enable"
+  },
+  "consentLater": {
+    "message": "Not now"
+  },
+  "consentEnabled": {
+    "message": "Enabled. You can use it on Twitch live channel pages."
+  },
+  "consentDisable": {
+    "message": "Disable"
+  },
+  "consentSaveError": {
+    "message": "Could not save your settings. Please try again."
+  },
+  "onboardingSummary": {
+    "message": "Adds official chat to Twitch popouts."
+  },
+  "consentQuestion": {
+    "message": "May the extension load and display Twitch’s official chat?"
+  },
+  "consentLocalUse": {
+    "message": "Information from the live channel page needed for display is used on your device and is not sent to the developer."
+  },
+  "consentStored": {
+    "message": "Only display settings and your consent choice are stored on your device."
+  },
+  "consentAgreement": {
+    "message": "Review this information and choose “Enable” if you agree."
+  },
+  "consentDeferred": {
+    "message": "The extension is still disabled. You can enable it from this page at any time."
+  },
+  "notesHeading": {
+    "message": "Notes"
+  },
+  "documentPipNote": {
+    "message": "The always-on-top window uses Document Picture-in-Picture. This does not add chat to standard video-only PiP."
+  },
+  "settingsHeading": {
+    "message": "Display feature settings"
+  },
+  "popupEnabled": {
+    "message": "Enabled"
+  },
+  "popupDisabled": {
+    "message": "Disabled"
+  },
+  "popupOpen": {
+    "message": "Help and settings"
+  },
+  "popupHint": {
+    "message": "Review the initial consent information and manage settings on the dedicated page."
+  },
+  "errorOpenSettings": {
+    "message": "Could not open the settings page. Please try again."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "popchat-for-twitch",
+  "version": "1.5.1",
+  "private": true,
+  "description": "Minimal local Twitch chat popout and Document PiP extension",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "node scripts/check.cjs",
+    "package": "python3 scripts/package.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
