@@ -99,7 +99,7 @@
     "message": "Mantenha a aba original da Twitch aberta enquanto usar a janela sempre no topo. Fechar, recarregar ou mudar de página na aba original também fecha a janela pequena."
   },
   "helpRestoreNote": {
-    "message": "Ao fechar a janela pequena, o vídeo volta para a aba original."
+    "message": "Ao fechar a janela que fica sempre no topo, o vídeo volta para a aba original."
   },
   "helpReloadNote": {
     "message": "Se a opção não aparecer, recarregue a página normal do canal ao vivo da Twitch."
@@ -117,7 +117,7 @@
     "message": "Agora não"
   },
   "consentEnabled": {
-    "message": "Ativada. Você pode usá-la nas páginas de canais ao vivo da Twitch."
+    "message": "Ativado. Você pode usá-lo nos canais ao vivo da Twitch e abrir páginas completas de transmissões arquivadas em outra janela, com replay do chat quando disponível."
   },
   "consentDisable": {
     "message": "Desativar"
@@ -132,7 +132,7 @@
     "message": "Você permite carregar e exibir o chat oficial da Twitch?"
   },
   "consentLocalUse": {
-    "message": "As informações da página da transmissão necessárias para a exibição são usadas no seu dispositivo e não são enviadas ao desenvolvedor."
+    "message": "As informações necessárias para exibir páginas de transmissões ao vivo e arquivadas da Twitch são usadas no seu dispositivo. Quando você escolhe abrir uma transmissão arquivada em outra janela, o ID do vídeo e a posição de reprodução são incluídos na URL da página oficial da Twitch. A extensão não salva esses valores, não extrai mensagens do chat nem envia essas informações ao desenvolvedor."
   },
   "consentStored": {
     "message": "Somente as configurações de exibição e sua escolha de consentimento são salvas no seu dispositivo."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "Não foi possível abrir a página de configurações. Tente novamente."
+  },
+  "vodPopupEntry": {
+    "message": "Abrir em outra janela com replay do chat"
+  },
+  "vodPipEntry": {
+    "message": "Sempre no topo com replay (experimental)"
+  },
+  "vodTitle": {
+    "message": "Replay da transmissão arquivada"
+  },
+  "vodMissing": {
+    "message": "Abra a página completa da transmissão arquivada na Twitch com o replay do chat visível e tente novamente."
+  },
+  "vodUnavailable": {
+    "message": "O replay do chat não está disponível. A Twitch precisa oferecê-lo para esta transmissão arquivada."
+  },
+  "vodPopupOpened": {
+    "message": "A transmissão arquivada foi aberta em uma nova janela. O vídeo original está pausado."
+  },
+  "vodOpenPage": {
+    "message": "Abrir transmissão arquivada com replay do chat"
+  },
+  "vodCloseMenu": {
+    "message": "Feche o menu de configurações da Twitch e tente novamente."
+  },
+  "vodPlayerChanged": {
+    "message": "A Twitch alterou o player da transmissão arquivada. A página original foi restaurada."
+  },
+  "vodPipUnavailable": {
+    "message": "A opção de manter transmissões arquivadas sempre no topo está desativada nesta versão de prévia até que os controles da Twitch e o replay do chat sejam verificados."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "Não foi possível abrir a janela da transmissão arquivada. Confira as configurações de pop-ups deste site."
+  },
+  "vodErrorVideoMissing": {
+    "message": "Nenhum vídeo encontrado ainda. Inicie a reprodução da transmissão arquivada e tente novamente."
+  },
+  "helpVodHeading": {
+    "message": "Transmissões arquivadas"
+  },
+  "helpVodInstruction": {
+    "message": "Na página completa da transmissão arquivada na Twitch, abra o menu da engrenagem do player e escolha “Abrir em outra janela com replay do chat”. O vídeo e o replay do chat disponível são abertos em uma janela normal, que não fica sempre no topo."
+  },
+  "helpVodPlaybackNote": {
+    "message": "O vídeo da aba original é pausado. Fechar a janela da transmissão arquivada não retoma a reprodução nem a transfere de volta para essa aba. As posições de reprodução das duas janelas não são sincronizadas."
   }
 }

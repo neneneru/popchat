@@ -20,14 +20,25 @@ test('all 11 packaged catalogs have identical complete keys and bounded manifest
   }
 });
 
-test('runtime and popup message references are supplied by every locale, without inline Japanese UI',()=>{
-  const files=['i18n.js','ui.js','content.js','help.js','help.html','onboarding.js','onboarding.html'];
-  const sources=files.map(file=>fs.readFileSync(path.join(root,file),'utf8')).join('\n');
-  const keys=[...sources.matchAll(/(?:\bt|\bmessage)\('([A-Za-z]\w*)'/g)].map(m=>m[1]);
-  keys.push(...[...sources.matchAll(/data-i18n="([A-Za-z]\w*)"/g)].map(m=>m[1]));
-  for(const locale of locales)for(const key of keys)assert.ok(catalog(locale)[key],`${locale}:${key}`);
-  assert.doesNotMatch(sources,/[\u3040-\u30ff\u3400-\u9fff]/);
+test('all runtime, extension-page, conditional, and manifest message references exist in every local catalog',()=>{
+  // Discover the full packaged runtime rather than maintaining a list that can
+  // omit newly loaded modules such as vod.js or gear-menu.js.
+  const files=fs.readdirSync(root).filter(file=>/\.(?:js|html|json)$/.test(file));
   const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
+  for(const file of manifest.content_scripts.flatMap(script=>script.js))assert.ok(files.includes(file));
+  assert.ok(files.includes('vod.js'));assert.ok(files.includes('gear-menu.js'));
+  const sources=files.map(file=>fs.readFileSync(path.join(root,file),'utf8')).join('\n');
+  const keys=new Set([...sources.matchAll(/(?:\bt|\bmessage|\bgetMessage)\(\s*['"]([A-Za-z]\w*)['"]/g)].map(match=>match[1]));
+  // Both branches of localized conditional selection must be present. This
+  // includes the distinct full-page and embedded-VOD menu labels.
+  for(const match of sources.matchAll(/(?:\bt|\bmessage)\([^;\n]*?\?\s*['"]([A-Za-z]\w*)['"]\s*:\s*['"]([A-Za-z]\w*)['"]\s*\)/g)){keys.add(match[1]);keys.add(match[2]);}
+  for(const match of sources.matchAll(/data-i18n=['"]([A-Za-z]\w*)['"]|__MSG_([A-Za-z]\w*)__+/g))keys.add(match[1]||match[2]);
+  for(const key of ['vodPopupEntry','vodOpenPage','vodTitle','vodPopupOpened','vodUnavailable','vodErrorPopupBlocked','vodErrorVideoMissing','helpVodHeading','helpVodInstruction','helpVodPlaybackNote'])assert.ok(keys.has(key),`new-feature key is actually referenced: ${key}`);
+  for(const locale of locales)for(const key of keys){assert.ok(Object.hasOwn(catalog(locale),key),`${locale}:${key}`);assert.ok(catalog(locale)[key].message.trim());}
+  // Twitch's exact native-label recognition is data, not extension-authored UI.
+  // Permit only that existing allowlist; all other inline Japanese UI still fails.
+  const withoutNativeLabels=sources.replace(/const NATIVE_LABELS = new Set\(\[[^\n]*\]\);/,'');
+  assert.doesNotMatch(withoutNativeLabels,/[\u3040-\u30ff\u3400-\u9fff]/);
   assert.equal(manifest.default_locale,'en');assert.equal(manifest.name,'__MSG_extensionName__');assert.equal(manifest.description,'__MSG_extensionDescription__');assert.equal(manifest.action.default_title,'__MSG_actionTitle__');
 });
 
@@ -66,7 +77,7 @@ test('unsupported browser locale uses complete English fallback',()=>{
 
 test('all verified native Twitch labels work independently of the 11 extension UI languages',()=>{
   // Source values, not translations invented by the extension; see evidence doc.
-  const labels=['ポップアウト','Popout Player','팝업 플레이어','弹出播放器','Reproductor emergente','Pop-out-Player','Ouvrir dans nouvelle fenêtre','Открыть в отдельном окне','مشغّل منبثق'];
+  const labels=['ポップアウト','Popout Player','팝업 플레이어','弹出播放器','Reproductor emergente','Pop-out-Player','Ouvrir dans nouvelle fenêtre','Открыть в отдельном окне','مشغّل منبثق','Pop-out de reprodução'];
   for(const locale of locales)for(const label of labels){
     let nativeClicks=0;const h=createHarness({locale});const {nativeButton,nativeRow}=h.openGear({label,nativeAction:()=>nativeClicks++});
     const entry=h.button(catalog(locale).gearEntry.message);assert.ok(entry,`${locale}:${label}`);assert.equal(nativeRow.nextSibling,entry.parentNode);assert.equal(nativeButton.textContent,label);

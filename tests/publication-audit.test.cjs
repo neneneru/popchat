@@ -14,9 +14,9 @@ const catalog = locale => JSON.parse(fs.readFileSync(path.join(extension, '_loca
 const read = name => fs.readFileSync(path.join(extension, name), 'utf8');
 const filesIn = directory => fs.readdirSync(directory, {withFileTypes:true}).flatMap(entry => entry.isDirectory()
   ? filesIn(path.join(directory, entry.name)).map(name => `${entry.name}/${name}`) : [entry.name]).sort();
-const runtimeFiles = ['manifest.json','i18n.js','core.js','gear-menu.js','ui.js','content.js','content.css','help.html','help.js','help.css','onboarding.html','onboarding.js','onboarding.css','background.js',
+const runtimeFiles = ['manifest.json','i18n.js','core.js','gear-menu.js','ui.js','vod.js','content.js','content.css','help.html','help.js','help.css','onboarding.html','onboarding.js','onboarding.css','background.js',
   ...[16,32,48,128].map(size => `icons/icon${size}.png`), ...locales.map(locale => `_locales/${locale}/messages.json`)].sort();
-const nativeLabels = ['ポップアウト','Popout Player','팝업 플레이어','弹出播放器','Reproductor emergente','Pop-out-Player','Ouvrir dans nouvelle fenêtre','Открыть в отдельном окне','مشغّل منبثق'];
+const nativeLabels = ['ポップアウト','Popout Player','팝업 플레이어','弹出播放器','Reproductor emergente','Pop-out-Player','Ouvrir dans nouvelle fenêtre','Открыть в отдельном окне','مشغّل منبثق','Pop-out de reprodução'];
 const statuses = doc => deepElements(doc.documentElement).filter(node => node.getAttribute('role') === 'status');
 
 for (const nativeLabel of nativeLabels) {
@@ -105,13 +105,13 @@ test('publication: exact approved brand, manifest permissions, and complete runt
   assert.equal(manifest.manifest_version, 3);
   assert.deepEqual(manifest.background,{service_worker:'background.js'});
   assert.deepEqual(manifest.options_ui,{page:'onboarding.html',open_in_tab:true});
-  assert.equal(manifest.version, '1.5.1');
+  assert.equal(manifest.version, '1.6.0');
   assert.deepEqual(manifest.permissions, ['storage']);
   for (const key of ['optional_permissions','host_permissions','optional_host_permissions','web_accessible_resources','externally_connectable','sandbox','update_url','key']) assert.equal(manifest[key], undefined, key);
   assert.equal(manifest.content_scripts.length, 1);
   assert.deepEqual(manifest.content_scripts[0].matches, ['https://www.twitch.tv/*','https://player.twitch.tv/*']);
   assert.equal(manifest.content_scripts[0].all_frames, false);
-  assert.deepEqual(manifest.content_scripts[0].js, ['i18n.js','core.js','gear-menu.js','ui.js','content.js']);
+  assert.deepEqual(manifest.content_scripts[0].js, ['i18n.js','core.js','gear-menu.js','ui.js','vod.js','content.js']);
   assert.equal(manifest.content_security_policy.extension_pages, "script-src 'self'; object-src 'none'");
   for (const locale of locales) {
     const c = catalog(locale);
@@ -172,8 +172,8 @@ for path in root.glob('*.zip'):
   assert all(not n.startswith('/') and '..' not in pathlib.PurePosixPath(n).parts for n in names)
   result[path.name]=names
 print(json.dumps(result))`], {encoding:'utf8'}));
-    assert.deepEqual(result['popchat-for-twitch-1.5.1.zip'].sort(), runtimeFiles);
-    const sourceFiles = result['popchat-for-twitch-1.5.1-source.zip'];
+    assert.deepEqual(result['popchat-for-twitch-1.6.0.zip'].sort(), runtimeFiles);
+    const sourceFiles = result['popchat-for-twitch-1.6.0-source.zip'];
     assert.ok(sourceFiles.includes('popchat-for-twitch/extension/manifest.json'));
     assert.ok(sourceFiles.includes('popchat-for-twitch/tests/publication-audit.test.cjs'));
     assert.ok(sourceFiles.includes('popchat-for-twitch/docs/assets/icon.svg'));

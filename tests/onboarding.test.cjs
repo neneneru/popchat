@@ -87,8 +87,9 @@ function pageHarness(page='onboarding', {locale='en',hub=storageHub(),deferRead=
       }); else complete();
     }
   }};
-  const c=catalog(locale);
+  const c=catalog(locale),i18nLookups=[];
   const i18n={getMessage(key) {
+    i18nLookups.push(key);
     if (key==='@@ui_locale') return locale;
     if (key==='@@bidi_dir') return locale==='ar'?'rtl':'ltr';
     return c[key]?.message || '';
@@ -96,7 +97,7 @@ function pageHarness(page='onboarding', {locale='en',hub=storageHub(),deferRead=
   const context=vm.createContext({document,window,chrome:{runtime,storage,i18n},console:{warn(){}},queueMicrotask,AbortController});
   vm.runInContext(read('i18n.js'),context,{filename:'i18n.js'});
   vm.runInContext(read(`${page}.js`),context,{filename:`${page}.js`});
-  return {document,window,runtime,hub,ownListeners,pendingReads,pendingWrites,pendingOpens,readKeys,
+  return {document,window,runtime,hub,ownListeners,pendingReads,pendingWrites,pendingOpens,readKeys,i18nLookups,
     el:id=>document.querySelector(`#${id}`), get opened() {return opened;},get closed() {return closed;}};
 }
 function enabled(h, expected) {
@@ -252,6 +253,17 @@ for (const locale of locales) test(`onboarding: ${locale} both extension pages l
       assert.ok(catalog(locale)[key]?.message.trim(),`${page}: ${locale}:${key}`);
       assert.equal(element.textContent,catalog(locale)[key].message,`${page}: ${locale}:${key}`);
     }
+    if(page==='onboarding'){
+      // VOD privacy and behavior disclosures must be visible through packaged
+      // markup/script localization, not merely present as unused catalog keys.
+      for(const key of ['consentLocalUse','consentEnabled','helpVodHeading','helpVodInstruction','helpVodPlaybackNote']){
+        const element=h.document.querySelector(`[data-i18n="${key}"]`);assert.ok(element,`${locale}: ${key} markup`);assert.ok(h.i18nLookups.includes(key),`${locale}: ${key} lookup`);assert.equal(element.textContent,catalog(locale)[key].message);
+        if(locale!=='en')assert.notEqual(element.textContent,catalog('en')[key].message,`${locale}: unintended English disclosure`);
+      }
+      assert.ok(h.document.querySelector('[data-i18n="helpVodInstruction"]').textContent.includes(catalog(locale).vodPopupEntry.message));
+      enabled(h,false);h.el('consent-enable').click();enabled(h,true);assert.equal(h.document.querySelector('[data-i18n="consentEnabled"]').textContent,catalog(locale).consentEnabled.message);
+    }
+    for(const key of h.i18nLookups.filter(key=>!key.startsWith('@@')))assert.ok(Object.hasOwn(catalog(locale),key),`${locale}: local lookup ${key}`);
     assert.ok(h.document.body.textContent.trim());dispose(h);
   }
 });
@@ -288,6 +300,7 @@ test('onboarding: standalone help pages have white/light responsive source rules
     assert.match(html,new RegExp(`<script src="${page}\\.js" defer>`));
     assert.doesNotMatch(html,/<(?:iframe|video|canvas)\b|\son\w+=|src="https?:/i);
     if(page==='help')assert.doesNotMatch(html,/<a\s/i,'compact popup has no alternative launcher link');
+    if(page==='onboarding'){assert.match(html,/<\/dl>\s*<section class="vod-usage" aria-labelledby="vod-heading">/,'VOD explanation follows the live-only six-control group');assert.match(html,/<h3 id="vod-heading" data-i18n="helpVodHeading"><\/h3>/);}
     assert.match(css,/color-scheme\s*:\s*light\s*[;}]/);
     assert.match(css,/background(?:-color)?\s*:\s*(?:#fff(?:fff)?|white)(?:\s*[;}])/i);
     assert.doesNotMatch(css,/prefers-color-scheme\s*:\s*dark|overflow(?:-[xy])?\s*:\s*(?:hidden|clip)/i);
@@ -389,13 +402,16 @@ test('onboarding: authoritative consent event clears a recovered popup storage-r
   assert.equal(h.el('popup-error').textContent,'');dispose(h);
 });
 
-test('onboarding: every locale key is referenced and retired popup/disclosure keys are absent', () => {
+test('onboarding: active locale keys are referenced and retired popup/disclosure keys are absent', () => {
   const runtime=fs.readdirSync(extension).filter(name=>/\.(?:js|html|json)$/.test(name)).map(read).join('\n');
-  const retired=['helpTagline','helpHeaderInstruction','helpPrivacy','helpPermissions','consentBody'];
+  const retired=['helpTagline','helpHeaderInstruction','helpPrivacy','helpPermissions','consentBody','vodRestore','vodPreview'];
+  // Keep these pre-existing translations for research/documentation continuity.
+  // No shipped VOD launch UI references either key after the gear-menu revision.
+  const retainedResearchLabels=new Set(['vodPipEntry','vodPipUnavailable']);
   for(const locale of locales) {
     const c=catalog(locale);
     for(const key of retired)assert.equal(c[key],undefined,`${locale}: retired ${key}`);
-    for(const key of Object.keys(c)) assert.ok(runtime.includes(`'${key}'`)||runtime.includes(`"${key}"`)||runtime.includes(`__MSG_${key}__`),`${locale}: unused ${key}`);
+    for(const key of Object.keys(c).filter(key=>!retainedResearchLabels.has(key))) assert.ok(runtime.includes(`'${key}'`)||runtime.includes(`"${key}"`)||runtime.includes(`__MSG_${key}__`),`${locale}: unused ${key}`);
   }
 });
 

@@ -7,7 +7,7 @@
   const SCAN_MS = 40;
   const normalize = text => String(text || '').replace(/\s+/g, ' ').trim();
   // Exact current Twitch labels; sources and gaps are documented in NATIVE-MENU-EVIDENCE.md.
-  const NATIVE_LABELS = new Set(['ポップアウト','Popout Player','팝업 플레이어','弹出播放器','Reproductor emergente','Pop-out-Player','Ouvrir dans nouvelle fenêtre','Открыть в отдельном окне','مشغّل منبثق']);
+  const NATIVE_LABELS = new Set(['ポップアウト','Popout Player','팝업 플레이어','弹出播放器','Reproductor emergente','Pop-out-Player','Ouvrir dans nouvelle fenêtre','Открыть в отдельном окне','مشغّل منبثق','Pop-out de reprodução']);
   const nativeLabel = text => NATIVE_LABELS.has(normalize(text));
 
   function create({window: win, document: doc, onOpen, label: entryLabel, language = 'en', direction = 'ltr'}) {

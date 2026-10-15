@@ -14,27 +14,39 @@ Das Erweiterungs-Popup in der Symbolleiste zeigt den Aktivierungsstatus. Wähle 
 
 ## Verwendung
 
+### Livestreams
+
 Klicke auf einer Twitch-Livestream-Seite auf das Zahnrad im Player. Wähle „Popout“ für ein normales kleines Fenster oder „Popout (immer im Vordergrund)“ für ein Fenster, das über anderen Fenstern bleibt. Wähle oben im kleinen Fenster die Anordnung des Chats.
 
 AUTO passt die Anordnung an das Fenster an. SIDE zeigt den Chat rechts, BOTTOM unter dem Video. HIDE blendet ihn aus, während er geladen bleibt. Wähle einen anderen Modus, um ihn wieder anzuzeigen. „Neu laden“ aktualisiert den offiziellen Chat. „Chatfenster“ öffnet nur den offiziellen Chat separat.
 
 Lass den ursprünglichen Twitch-Tab geöffnet, solange du das Vordergrundfenster verwendest. Wenn du den Tab schließt, neu lädst oder zu einer anderen Seite wechselst, schließt sich auch das kleine Fenster. Wenn du das kleine Fenster schließt, kehrt das Video zum ursprünglichen Tab zurück.
 
+### Archivierte Videos (VOD, Version 1.6.0)
+
+Öffne auf einer offiziellen Twitch-Archivseite die Player-Einstellungen über das Zahnradsymbol und wähle „Popout mit Chat-Wiedergabe“. Ein normales Fenster öffnet die offizielle Videoseite an der aktuellen Wiedergabeposition mit dem Twitch-Player und der Chat-Wiedergabe. Der ursprüngliche Tab bleibt geöffnet und sein Video wird pausiert. Beim Schließen des Popups wird die Wiedergabeposition nicht automatisch zum ursprünglichen Tab zurückübertragen und dessen Video nicht automatisch fortgesetzt.
+
+AUTO, SIDE, BOTTOM und HIDE funktionieren auch für die Chat-Wiedergabe. VODs unterstützen nur normale Fenster, keine Fenster, die immer im Vordergrund bleiben. Die VOD-Werkzeugleiste hat keine Schaltflächen „Neu laden“ oder „Chatfenster“. Die Verfügbarkeit der Chat-Wiedergabe und das Wiedergabeverhalten hängen von Twitch ab.
+
 ## Unterstützung und Einschränkungen
 
-Für Chrome und Edge auf dem Desktop mit Document Picture-in-Picture (Chromium 116 oder neuer). Mobilgeräte, Firefox, VODs und Clips werden nicht unterstützt. Der Menüpunkt wird nur bei erkannter Twitch-Menüstruktur ergänzt; nach einem Twitch-Update kann er fehlen. Schließen, Neuladen oder ein Seitenwechsel im ursprünglichen Tab schließt das Vordergrundfenster. Manche Twitch-Einstellungen und Player-Einblendungen werden nicht mit dem Video verschoben. Anmeldung und Chatnachrichten hängen von Twitch und den Browsereinstellungen ab.
+Für Chrome und Edge auf dem Desktop (Chromium 116 oder neuer). Livestream-Fenster im Vordergrund benötigen Document Picture-in-Picture; normale VOD-Fenster nicht. Mobilgeräte, Firefox und Clips werden nicht unterstützt. Der Menüpunkt wird nur bei erkannter Twitch-Menüstruktur ergänzt; nach einem Twitch-Update kann er fehlen. Schließen, Neuladen oder ein Seitenwechsel im ursprünglichen Tab schließt das Vordergrundfenster. Manche Twitch-Einstellungen und Player-Einblendungen werden nicht mit dem Video verschoben. Anmeldung und Chatnachrichten hängen von Twitch und den Browsereinstellungen ab.
 
 Das Vordergrundfenster verwendet Document Picture-in-Picture. Der normale PiP-Modus für Videos wird dadurch nicht um einen Chat ergänzt.
 
 ## Datenschutz
 
-Nach dem Aktivieren werden die aktuelle Kanal-URL, das vorhandene Videoelement und die Player-/Menüstruktur lokal für die Anordnung von Video und Chat verwendet. Der offizielle Chat verbindet sich direkt mit Twitch und kann deine Twitch-Anmeldung nutzen. Nur Anzeigeeinstellungen und dein Zustimmungsstatus werden lokal gespeichert. Es werden keine Daten an den Entwickler gesendet.
+Nach dem Aktivieren werden die aktuelle Kanal- oder Video-URL, die aktuelle Wiedergabeposition, das vorhandene Videoelement und die Player-/Menüstruktur lokal für die Anordnung von Video und Chat verwendet. Der offizielle Chat verbindet sich direkt mit Twitch und kann deine Twitch-Anmeldung nutzen. Nur Anzeigeeinstellungen und dein Zustimmungsstatus werden lokal gespeichert. Es werden keine Daten an den Entwickler gesendet.
 
-Vor dem Aktivieren liest die Erweiterung weder die Kanal-URL noch die Player-/Menüstruktur und lädt keinen offiziellen Chat. Öffne über das Erweiterungs-Popup in der Symbolleiste „Hilfe und Einstellungen“ und wähle auf der Seite „Deaktivieren“, um deine Einwilligung zu widerrufen. Der von der Erweiterung verwaltete eingebettete Chat und das Vordergrundfenster werden geschlossen und das Video zurückgebracht. Deine Anzeigeeinstellungen bleiben erhalten.
+Vor dem Aktivieren liest die Erweiterung weder die Kanal- oder Video-URL noch die Wiedergabeposition oder die Player-/Menüstruktur und lädt keinen offiziellen Chat. Öffne über das Erweiterungs-Popup in der Symbolleiste „Hilfe und Einstellungen“ und wähle auf der Seite „Deaktivieren“, um deine Einwilligung zu widerrufen. Der von der Erweiterung verwaltete eingebettete Chat und das Vordergrundfenster werden geschlossen und das Video zurückgebracht. Deine Anzeigeeinstellungen bleiben erhalten.
 
-Die Erweiterung enthält keine Analysefunktionen oder Werbung und verwendet keinen eigenen Server. Sie liest den Kanal aus der aktuellen Seiten-URL ausschließlich zum Anzeigen des zugehörigen offiziellen Chats. Nur Anordnung, Fensterbreite und -höhe sowie dein Zustimmungsstatus werden lokal im Erweiterungsspeicher abgelegt, ohne Synchronisierung. Chats, Browserverlauf, Kanal- und Benutzernamen, Zugangsdaten sowie Cookies werden nicht gespeichert. Der Inhalt des offiziellen Chat-Frames wird nicht ausgelesen. Offizielle Twitch-Einbettungen verbinden sich direkt mit Twitch und nutzen dessen Sitzung, soweit der Browser dies zulässt. Twitch verarbeitet Anmeldung und Chat gemäß seinen eigenen Richtlinien. Die Erweiterung nutzt nur die Berechtigung storage und läuft auf HTTPS-Seiten von www.twitch.tv und player.twitch.tv.
+Die Erweiterung enthält keine Analysefunktionen oder Werbung und verwendet keinen eigenen Server. Bei Livestreams liest sie den Kanal aus der aktuellen Seiten-URL ausschließlich zum Anzeigen des zugehörigen offiziellen Chats. Nur Anordnung, Fensterbreite und -höhe sowie dein Zustimmungsstatus werden lokal im Erweiterungsspeicher abgelegt, ohne Synchronisierung. Chats, Browserverlauf, Kanal- und Benutzernamen, Zugangsdaten sowie Cookies werden nicht gespeichert. Der Inhalt des offiziellen Chat-Frames wird nicht ausgelesen. Offizielle Twitch-Einbettungen verbinden sich direkt mit Twitch und nutzen dessen Sitzung, soweit der Browser dies zulässt. Twitch verarbeitet Anmeldung und Chat gemäß seinen eigenen Richtlinien. Die Erweiterung nutzt nur die Berechtigung storage und läuft auf HTTPS-Seiten von www.twitch.tv und player.twitch.tv.
+
+Für VODs werden die Video-ID und die aktuelle Wiedergabeposition verwendet, um die offizielle Twitch-Archivseite zu öffnen. Die Erweiterung ordnet den vorhandenen Twitch-Player und die Chat-Wiedergabe an, ohne zusätzliche Twitch-API-Anfragen zu stellen oder Chat-Wiedergabenachrichten zu lesen. Es werden keine Daten an den Entwickler gesendet. Beim Deaktivieren kehrt ein geöffnetes VOD-Popup zur normalen Anordnung zurück; die offizielle Twitch-Seite selbst bleibt geöffnet.
 
 ## Aktualisieren
+
+Lass nur eine Ausgabe von PopChat aktiviert. Deaktiviere ältere oder doppelte Installationen, bevor du die aktualisierte Ausgabe aktivierst, und lade anschließend alle geöffneten Twitch-Seiten neu.
 
 Schließe das kleine Fenster. Ersetze den gesamten geladenen Ordner am selben im Browser registrierten Pfad, statt neue und alte Dateien zusammenzuführen. Lade danach die Erweiterung in der Erweiterungsverwaltung und alle geöffneten Twitch-Seiten neu. Normale Updates behalten die gespeicherten Anzeigeeinstellungen bei.
 

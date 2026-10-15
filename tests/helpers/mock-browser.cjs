@@ -86,7 +86,7 @@ class Element extends EventTarget {
   play(){this.paused=false;this.playCount++;return Promise.resolve();}
 }
 class Document extends EventTarget {
-  constructor(){super();this.nodeType=9;this.isConnected=true;this.children=[];this.documentElement=new Element('html',this);this.documentElement.parentNode=this;this.children.push(this.documentElement);this.body=new Element('body',this);this.documentElement.append(this.body);}
+  constructor(){super();this.nodeType=9;this.isConnected=true;this.children=[];this.documentElement=new Element('html',this);this.documentElement.parentNode=this;this.children.push(this.documentElement);this.head=new Element('head',this);this.body=new Element('body',this);this.documentElement.append(this.head,this.body);}
   createElement(tag){return new Element(tag,this);}
   querySelectorAll(s){return this.documentElement.querySelectorAll(s);}
   querySelector(s){return this.querySelectorAll(s)[0]||null;}
@@ -123,7 +123,9 @@ function createHarness(options={}){
   const available=fs.readdirSync(path.join(__dirname,'../../extension/_locales'));
   const selected=available.includes(locale)?locale:(available.includes(locale.split(/[-_]/)[0])?locale.split(/[-_]/)[0]:'en');
   const catalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../../extension/_locales',selected,'messages.json'),'utf8'));
+  const i18nLookups=[];
   const i18n={getMessage(key,substitutions=[]){
+    i18nLookups.push({key,locale:selected});
     if(key==='@@ui_locale')return selected;
     if(key==='@@bidi_dir')return selected==='ar'?'rtl':'ltr';
     const entry=catalog[key];if(!entry)return '';
@@ -135,9 +137,25 @@ function createHarness(options={}){
   const pendingStorageReads=[];
   function changeConsent(value){const oldValue=storageState.tccConsentVersion;storageState.tccConsentVersion=value;for(const listener of [...storageListeners])listener({tccConsentVersion:{oldValue,newValue:value}},'local');}
   const storage={onChanged:{addListener:listener=>storageListeners.add(listener),removeListener:listener=>storageListeners.delete(listener)},local:{get:(_key,fn)=>{const value={...storageState};if(options.deferStorage)pendingStorageReads.push(()=>fn(value));else fn(value);},set:(value,fn)=>{writes.push(JSON.parse(JSON.stringify(value)));Object.assign(storageState,value);fn?.();}}};
-  const context=vm.createContext({window,document,location,URL,AbortController,MutationObserver,Element,HTMLElement:Element,Event,getComputedStyle,queueMicrotask,console:{warn:()=>{}},setTimeout:setTimer,clearTimeout:clearTimer,chrome:{i18n,runtime:{getManifest:()=>({version:"1.5.1"})},storage}});
+  const context=vm.createContext({window,document,location,URL,AbortController,MutationObserver,Element,HTMLElement:Element,Event,getComputedStyle,queueMicrotask,console:{warn:()=>{}},setTimeout:setTimer,clearTimeout:clearTimer,chrome:{i18n,runtime:{getManifest:()=>({version:"1.6.0"})},storage}});
   const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../../extension/manifest.json'),'utf8'));
-  for(const file of manifest.content_scripts[0].js)vm.runInContext(fs.readFileSync(path.join(__dirname,'../../extension',file),'utf8'),context,{filename:file});
+  for(const file of manifest.content_scripts[0].js){
+    // Research-only opt-in for lifecycle coverage of the unshipped VOD PiP path.
+    // Production content.js is executed unchanged and defaults to no VOD PiP.
+    if(file==='content.js'&&options.vodPipResearch===true){
+      const vod=context.TCCVod;
+      context.TCCVod=Object.freeze({...vod,create:configuration=>{const controller=vod.create({...configuration,allowExperimentalPip:true});context.vodResearch=controller;return controller;}});
+    }
+    let source=fs.readFileSync(path.join(__dirname,'../../extension',file),'utf8');
+    // The research command is exposed only in this VM instrumented copy. The
+    // shipped controller has no PiP command and no VOD PiP launch UI.
+    if(file==='vod.js'&&options.vodPipResearch===true){
+      const boundary='return Object.freeze({reconcile,stop,resize});';
+      if(!source.includes(boundary))throw new Error('VOD research boundary changed');
+      source=source.replace(boundary,'return Object.freeze({reconcile,stop,resize,openPip});');
+    }
+    vm.runInContext(source,context,{filename:file});
+  }
   function runTimers(ms){for(const [key,t]of [...timers])if(ms===undefined||t.ms<=ms){timers.delete(key);t.fn();}}
   function button(text,doc=document){return deepElements(doc.documentElement).find(e=>e.tagName==='BUTTON'&&e.textContent===text);}
   async function click(text,doc=document){const b=button(text,doc);if(!b)throw new Error(`Button missing: ${text}`);b.click();await flush();}
@@ -151,6 +169,6 @@ function createHarness(options={}){
     addRow('詳細設定');const native=addRow(label);native.button.addEventListener('click',nativeAction);addRow('キーボードショートカット');menuParent.append(menu);gear.setAttribute('aria-expanded','true');emit(gear,'click',{bubbles:true});mutation([{type:'childList',target:menuParent,addedNodes:[menu],removedNodes:[]}]);runTimers(200);return {menu,nativeRow:native.row,nativeButton:native.button};
   }
   function closeGear(){const menu=document.querySelector('[data-a-target="player-settings-menu"]');menu?.remove();gear.setAttribute('aria-expanded','false');emit(gear,'click',{bubbles:true});mutation([{type:'childList',target:player,addedNodes:[],removedNodes:menu?[menu]:[]}]);runTimers(200);}
-  return {document,window,location,root,player,container,video,gear,context,timers,observers,writes,storageListeners,pendingStorageReads,changeConsent,opened,openContexts,pipWindows,pipRequests,runTimers,button,click,mutation,openGear,closeGear,emit,keydown,focusedElement,deepElements};
+  return {document,window,location,root,player,container,video,gear,context,timers,observers,writes,i18nLookups,storageListeners,pendingStorageReads,changeConsent,opened,openContexts,pipWindows,pipRequests,runTimers,button,click,mutation,openGear,closeGear,emit,keydown,focusedElement,deepElements};
 }
 module.exports={createHarness,emit,keydown,focusedElement,deepElements,Document,Element,flush};

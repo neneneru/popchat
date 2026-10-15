@@ -99,7 +99,7 @@
     "message": "使用置顶小窗口时，请保持原 Twitch 标签页打开。关闭、重新加载原标签页或跳转到其他页面时，小窗口也会关闭。"
   },
   "helpRestoreNote": {
-    "message": "关闭小窗口后，视频会返回原标签页。"
+    "message": "关闭置顶窗口后，视频会返回原标签页。"
   },
   "helpReloadNote": {
     "message": "如果未显示此菜单项，请重新加载 Twitch 的普通直播频道页面。"
@@ -117,7 +117,7 @@
     "message": "暂不启用"
   },
   "consentEnabled": {
-    "message": "已启用。可在 Twitch 直播频道页面使用。"
+    "message": "已启用。您可以在 Twitch 直播频道中使用本扩展，也可以在新窗口中打开提供聊天回放的完整存档页面。"
   },
   "consentDisable": {
     "message": "停用"
@@ -132,7 +132,7 @@
     "message": "是否允许加载并显示 Twitch 官方聊天？"
   },
   "consentLocalUse": {
-    "message": "显示所需的直播页面信息仅在您的设备上使用，不会发送给开发者。"
+    "message": "Twitch 直播和存档页面中用于显示的信息会在您的设备上使用。当您选择在新窗口中打开存档时，视频 ID 和播放位置会包含在 Twitch 官方页面的 URL 中。本扩展不会保存这些值、提取聊天消息或将这些信息发送给开发者。"
   },
   "consentStored": {
     "message": "设备上仅保存显示设置和同意记录。"
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "无法打开设置页面。请重试。"
+  },
+  "vodPopupEntry": {
+    "message": "弹出播放器（含聊天回放）"
+  },
+  "vodPipEntry": {
+    "message": "置顶并显示回放（实验性功能）"
+  },
+  "vodTitle": {
+    "message": "存档回放"
+  },
+  "vodMissing": {
+    "message": "请打开该存档在 Twitch 上的完整页面，显示聊天回放后重试。"
+  },
+  "vodUnavailable": {
+    "message": "聊天回放不可用。只有 Twitch 为此存档提供聊天回放时才能使用。"
+  },
+  "vodPopupOpened": {
+    "message": "已在新窗口中打开存档。原视频已暂停。"
+  },
+  "vodOpenPage": {
+    "message": "打开存档及聊天回放"
+  },
+  "vodCloseMenu": {
+    "message": "请关闭 Twitch 设置菜单，然后重试。"
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch 更改了存档播放器。已返回原页面。"
+  },
+  "vodPipUnavailable": {
+    "message": "在确认 Twitch 控件和聊天回放正常工作之前，此预览版将禁用存档置顶功能。"
+  },
+  "vodErrorPopupBlocked": {
+    "message": "无法打开存档窗口。请检查此网站的弹出窗口设置。"
+  },
+  "vodErrorVideoMissing": {
+    "message": "尚未找到视频。请先播放存档，然后重试。"
+  },
+  "helpVodHeading": {
+    "message": "存档视频"
+  },
+  "helpVodInstruction": {
+    "message": "在存档的 Twitch 完整页面中，点击播放器的设置齿轮，选择“弹出播放器（含聊天回放）”。视频和可用的聊天回放会在普通窗口中打开，该窗口不会始终置顶。"
+  },
+  "helpVodPlaybackNote": {
+    "message": "原标签页中的视频会暂停。关闭存档窗口不会在原标签页中自动恢复播放，也不会将当前播放转回原标签页。两个窗口的播放位置不会同步。"
   }
 }

@@ -21,7 +21,7 @@ for(const url of ['https://www.twitch.tv/example',...nativeURLs]){
   });
 }
 
-for(const url of ['https://www.twitch.tv/directory','https://www.twitch.tv/popout/example/chat','https://www.twitch.tv/embed/example/chat','https://www.twitch.tv/videos/123','https://player.twitch.tv/?video=v123']){
+for(const url of ['https://www.twitch.tv/directory','https://www.twitch.tv/popout/example/chat','https://www.twitch.tv/embed/example/chat']){
   test(`unsupported route never mounts extension controls or iframe: ${url}`,()=>{
     const h=createHarness({url});h.openGear();assert.equal(h.button(topLabel),undefined);assert.equal(h.document.querySelector('#tcc-panel'),null);assert.equal(all(h.document,e=>e.tagName==='IFRAME').length,0);assert.equal(h.observers.filter(o=>o.active).length,0);
   });
@@ -41,8 +41,8 @@ test('browser-native video PiP is left intact, without diagnostic listeners or g
   let calls=0;const request=()=>{calls++;return Promise.resolve();};const h=createHarness({setup:({video})=>{video.requestPictureInPicture=request;}});const event=emit(h.document,'enterpictureinpicture',{target:h.video});assert.equal(event.defaultPrevented,false);assert.equal(h.video.requestPictureInPicture,request);assert.equal(calls,0);assert.equal(h.pipRequests.length,0);assert.equal(h.opened.length,0);assert.equal(h.video.parentNode,h.container);assert.equal(all(h.document,e=>e.getAttribute('role')==='status').length,0);
 });
 
-test('manifest loads only the five live content modules, retains minimum permissions, and excludes former canvas module',()=>{
-  const manifest=JSON.parse(source('manifest.json'));assert.deepEqual(manifest.content_scripts[0].js,['i18n.js','core.js','gear-menu.js','ui.js','content.js']);assert.deepEqual(manifest.permissions,['storage']);assert.deepEqual(manifest.background,{service_worker:'background.js'});assert.equal(manifest.host_permissions,undefined);assert.equal(manifest.web_accessible_resources,undefined);assert.equal(manifest.content_scripts[0].all_frames,false);assert.equal(fs.existsSync(path.join(__dirname,'../extension/native-pip.js')),false);
+test('manifest loads the live and isolated VOD content modules, retains minimum permissions, and excludes former canvas module',()=>{
+  const manifest=JSON.parse(source('manifest.json'));assert.deepEqual(manifest.content_scripts[0].js,['i18n.js','core.js','gear-menu.js','ui.js','vod.js','content.js']);assert.deepEqual(manifest.permissions,['storage']);assert.deepEqual(manifest.background,{service_worker:'background.js'});assert.equal(manifest.host_permissions,undefined);assert.equal(manifest.web_accessible_resources,undefined);assert.equal(manifest.content_scripts[0].all_frames,false);assert.equal(fs.existsSync(path.join(__dirname,'../extension/native-pip.js')),false);
 });
 
 test('shipped runtime has no obsolete launcher, diagnostic, Canvas, frame-copy or timer-polling implementation',()=>{

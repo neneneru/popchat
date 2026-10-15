@@ -1,6 +1,6 @@
 {
   "name": "popchat-for-twitch",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "private": true,
   "description": "Minimal local Twitch chat popout and Document PiP extension",
   "scripts": {

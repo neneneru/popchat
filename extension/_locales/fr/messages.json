@@ -99,7 +99,7 @@
     "message": "Gardez l’onglet Twitch d’origine ouvert pendant l’utilisation de la fenêtre au premier plan. Fermer, recharger ou changer de page dans cet onglet ferme aussi la petite fenêtre."
   },
   "helpRestoreNote": {
-    "message": "Fermer la petite fenêtre remet la vidéo dans l’onglet d’origine."
+    "message": "Fermer la fenêtre maintenue au premier plan remet la vidéo dans l’onglet d’origine."
   },
   "helpReloadNote": {
     "message": "Si l’option est absente, rechargez la page habituelle de la chaîne en direct sur Twitch."
@@ -117,7 +117,7 @@
     "message": "Pas maintenant"
   },
   "consentEnabled": {
-    "message": "Activée. Vous pouvez l’utiliser sur les pages des chaînes Twitch en direct."
+    "message": "Activé. Vous pouvez l’utiliser sur les chaînes Twitch en direct et ouvrir les pages complètes des archives dans une autre fenêtre, avec la rediffusion du chat lorsqu’elle est disponible."
   },
   "consentDisable": {
     "message": "Désactiver"
@@ -132,7 +132,7 @@
     "message": "Autorisez-vous le chargement et l’affichage du chat officiel de Twitch ?"
   },
   "consentLocalUse": {
-    "message": "Les informations de la page du direct nécessaires à l’affichage sont utilisées sur votre appareil et ne sont pas envoyées au développeur."
+    "message": "Les informations nécessaires à l’affichage des directs et des archives Twitch sont utilisées sur votre appareil. Lorsque vous choisissez d’ouvrir une archive dans une autre fenêtre, son identifiant vidéo et sa position de lecture sont inclus dans l’URL de la page officielle de Twitch. L’extension n’enregistre pas ces valeurs, n’extrait pas les messages du chat et n’envoie pas ces informations au développeur."
   },
   "consentStored": {
     "message": "Seuls les réglages d’affichage et votre choix de consentement sont enregistrés sur votre appareil."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "Impossible d’ouvrir la page des réglages. Veuillez réessayer."
+  },
+  "vodPopupEntry": {
+    "message": "Ouvrir dans une fenêtre avec rediffusion du chat"
+  },
+  "vodPipEntry": {
+    "message": "Toujours au premier plan avec rediffusion (expérimental)"
+  },
+  "vodTitle": {
+    "message": "Rediffusion de l’archive"
+  },
+  "vodMissing": {
+    "message": "Ouvrez la page Twitch complète de l’archive avec la rediffusion du chat visible, puis réessayez."
+  },
+  "vodUnavailable": {
+    "message": "La rediffusion du chat n’est pas disponible. Twitch doit la proposer pour cette archive."
+  },
+  "vodPopupOpened": {
+    "message": "L’archive a été ouverte dans une nouvelle fenêtre. La vidéo d’origine est en pause."
+  },
+  "vodOpenPage": {
+    "message": "Ouvrir l’archive avec la rediffusion du chat"
+  },
+  "vodCloseMenu": {
+    "message": "Fermez le menu des paramètres Twitch, puis réessayez."
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch a modifié le lecteur de l’archive. Retour à la page d’origine."
+  },
+  "vodPipUnavailable": {
+    "message": "L’affichage des archives toujours au premier plan est désactivé dans cette version préliminaire tant que les commandes Twitch et la rediffusion du chat n’ont pas été vérifiées."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "Impossible d’ouvrir la fenêtre de l’archive. Vérifiez les paramètres de fenêtres pop-up de ce site."
+  },
+  "vodErrorVideoMissing": {
+    "message": "Aucune vidéo trouvée pour le moment. Lancez la lecture de l’archive, puis réessayez."
+  },
+  "helpVodHeading": {
+    "message": "Vidéos archivées"
+  },
+  "helpVodInstruction": {
+    "message": "Sur la page Twitch complète de l’archive, ouvrez le menu des paramètres du lecteur avec la roue dentée et choisissez « Ouvrir dans une fenêtre avec rediffusion du chat ». La vidéo et la rediffusion du chat disponible s’ouvrent dans une fenêtre normale, qui ne reste pas toujours au premier plan."
+  },
+  "helpVodPlaybackNote": {
+    "message": "La vidéo de l’onglet d’origine est mise en pause. Fermer la fenêtre de l’archive ne relance pas la lecture et ne la transfère pas vers cet onglet. Les positions de lecture des deux fenêtres ne sont pas synchronisées."
   }
 }

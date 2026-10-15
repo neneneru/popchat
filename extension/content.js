@@ -13,6 +13,8 @@
   let opening = false, disposed = false, suspended = false, lifecycleVersion = 0;
   let consentEnabled = false, consentGeneration = 0;
   const supportsPip = () => typeof window.documentPictureInPicture?.requestWindow === 'function';
+  let vod = null;
+  const parseRoute = value => Core.parseLocation(value) || TCCVod.parseLocation(value);
   const life = new AbortController();
   const listen = (target, event, callback, options = {}) => target.addEventListener(event, callback, {...options, signal: life.signal});
 
@@ -33,7 +35,7 @@
     clearTimeout(reconcileTimer); reconcileTimer = 0;
     clearTimeout(savingTimer); savingTimer = 0;
     clearTimeout(navigationTimer); navigationTimer = 0;
-    finishPip(true); unmountPopout(); route = null;
+    finishPip(true); unmountPopout(); vod?.stop(); route = null;
   }
   function storageChanged(changes, area) {
     if (area !== 'local' || !Object.hasOwn(changes, 'tccConsentVersion')) return;
@@ -89,6 +91,7 @@
     else announce(t('errorPopupBlocked'));
   }
   function resize() {
+    vod?.resize();
     if (popout) {
       const value = Core.layout(preferences.mode, window.innerWidth, window.innerHeight);
       popout.panel.setMode(preferences.mode); popout.panel.setLayout(value);
@@ -195,11 +198,18 @@
   }
   function reconcile() {
     if (disposed || suspended || !consentEnabled) return;
-    const next=Core.parseLocation(location.href);
-    if (route?.channel!==next?.channel || route?.popout!==next?.popout) {
-      lifecycleVersion+=1;gear?.stop();finishPip(true);unmountPopout();stopDiscovery();route=next;
+    const next=parseRoute(location.href);
+    if (TCCVod.identity(route)!==TCCVod.identity(next)) {
+      lifecycleVersion+=1;gear?.stop();finishPip(true);unmountPopout();vod?.stop();stopDiscovery();route=next;
     }
     if (!route) return;
+    if (route.kind === 'vod') {
+      gear?.stop();
+      const video=currentVideo();
+      vod?.reconcile(route,video);
+      if(!video)discover();else stopDiscovery();
+      return;
+    }
     if (pip) {
       if (!pip.marker.isConnected) finishPip(true,t('statusPageUpdated'));
       else return;
@@ -211,6 +221,7 @@
     else if(supportsPip())gear?.start(video);
     else gear?.stop();
   }
+  vod=TCCVod.create({window,document,getCurrentVideo:currentVideo,getPreferences:()=>preferences,onMode:setMode,onSize:(width,height)=>{if(!preferencesLoaded){earlyPreferenceChanges.add('width');earlyPreferenceChanges.add('height');}preferences=Core.settings({...preferences,width,height});save();},onReconcile:scheduleReconcile});
   gear=TCCGearMenu.create({window,document,onOpen:openPip,label:t('gearEntry'),language:I18n.language,direction:I18n.direction});
   listen(window,'resize',resize);
   listen(window,'popstate',scheduleReconcile);
@@ -233,7 +244,7 @@
   listen(document,'securitypolicyviolation',securityViolation);
   listen(window,'pagehide',event=>{
     suspended=true;clearTimeout(navigationTimer);navigationTimer=0;
-    lifecycleVersion+=1;gear?.stop();stopDiscovery();clearTimeout(reconcileTimer);reconcileTimer=0;finishPip(true);unmountPopout();
+    lifecycleVersion+=1;gear?.stop();stopDiscovery();clearTimeout(reconcileTimer);reconcileTimer=0;finishPip(true);unmountPopout();vod?.stop();
     clearTimeout(savingTimer);
     if (consentEnabled && preferencesLoaded) try { chrome.storage.local.set({tccPreferences:preferences},()=>void chrome.runtime.lastError); } catch {}
     if (!event.persisted) { disposed=true;life.abort();try {chrome.storage.onChanged.removeListener(storageChanged);} catch {} }

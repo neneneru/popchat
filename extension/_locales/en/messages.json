@@ -99,7 +99,7 @@
     "message": "Keep the original Twitch tab open while using the always-on-top window. Closing, reloading or navigating away from the original tab also closes the small window."
   },
   "helpRestoreNote": {
-    "message": "Closing the small window returns the video to the original tab."
+    "message": "Closing the always-on-top window returns the video to the original tab."
   },
   "helpReloadNote": {
     "message": "If the menu item is missing, reload the regular Twitch live channel page."
@@ -117,7 +117,7 @@
     "message": "Not now"
   },
   "consentEnabled": {
-    "message": "Enabled. You can use it on Twitch live channel pages."
+    "message": "Enabled. You can use it on Twitch live channels and open full archive pages with available replay chat in another window."
   },
   "consentDisable": {
     "message": "Disable"
@@ -132,7 +132,7 @@
     "message": "May the extension load and display Twitch’s official chat?"
   },
   "consentLocalUse": {
-    "message": "Information from the live channel page needed for display is used on your device and is not sent to the developer."
+    "message": "Display information from Twitch live and archive pages is used on your device. When you choose to open an archive in another window, its video ID and playback time form the official Twitch page URL. The extension does not save these values, extract chat messages, or send this information to the developer."
   },
   "consentStored": {
     "message": "Only display settings and your consent choice are stored on your device."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "Could not open the settings page. Please try again."
+  },
+  "vodPopupEntry": {
+    "message": "Pop out with replay chat"
+  },
+  "vodPipEntry": {
+    "message": "Always on top with replay (experimental)"
+  },
+  "vodTitle": {
+    "message": "Archive replay"
+  },
+  "vodMissing": {
+    "message": "Open the archive’s full Twitch page with replay chat visible, then try again."
+  },
+  "vodUnavailable": {
+    "message": "Replay chat is not available. Twitch must provide it for this archive."
+  },
+  "vodPopupOpened": {
+    "message": "Archive opened in a new window. The original video is paused."
+  },
+  "vodOpenPage": {
+    "message": "Open archive with replay"
+  },
+  "vodCloseMenu": {
+    "message": "Close the Twitch settings menu, then try again."
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch changed the archive player. Returned to the original page."
+  },
+  "vodPipUnavailable": {
+    "message": "Archive always-on-top is disabled in this preview until Twitch controls and replay are verified."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "The archive window could not open. Check this site’s popup settings."
+  },
+  "vodErrorVideoMissing": {
+    "message": "No video found yet. Start archive playback, then try again."
+  },
+  "helpVodHeading": {
+    "message": "Archived videos"
+  },
+  "helpVodInstruction": {
+    "message": "On the archive’s full Twitch page, open the player’s settings gear and choose “Pop out with replay chat”. This opens the video and available replay chat in a regular window, not an always-on-top window."
+  },
+  "helpVodPlaybackNote": {
+    "message": "The original tab’s video is paused. Closing the archive window does not resume it or return playback to that tab. Playback positions are not synchronized between the two windows."
   }
 }

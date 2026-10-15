@@ -8,7 +8,7 @@ OUT = ROOT / 'dist'
 OUT.mkdir(exist_ok=True)
 VERSION = json.loads((EXT/'manifest.json').read_text())['version']
 LOCALES = {'ja','en','ko','zh_CN','es','de','fr','pt_BR','ru','ar','id'}
-TOP = {'manifest.json','i18n.js','core.js','gear-menu.js','ui.js','content.js','content.css','help.html','help.js','help.css','onboarding.html','onboarding.js','onboarding.css','background.js'}
+TOP = {'manifest.json','i18n.js','core.js','gear-menu.js','ui.js','vod.js','content.js','content.css','help.html','help.js','help.css','onboarding.html','onboarding.js','onboarding.css','background.js'}
 ALLOWED = TOP | {f'icons/icon{size}.png' for size in [16,32,48,128]} | {f'_locales/{locale}/messages.json' for locale in LOCALES}
 RUNTIME = sorted(p for p in EXT.rglob('*') if p.is_file())
 assert {p.relative_to(EXT).as_posix() for p in RUNTIME} == ALLOWED, 'Unexpected/missing runtime file'

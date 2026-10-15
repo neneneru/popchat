@@ -27,12 +27,29 @@
     });
     return {group,setMode(value){buttons.forEach((b,index)=>b.setAttribute('aria-pressed',String(TCCCore.MODES[index]===value)));}};
   }
+  function makeHeader(doc,title,mode,onMode){
+    const bar=element(doc,'header','bar');bar.style.pointerEvents='auto';
+    const heading=element(doc,'span','title',title);heading.title=title;
+    const modes=makeModes(doc,mode,onMode);bar.append(heading,modes.group);
+    return {bar,setMode:modes.setMode};
+  }
+  // Header-only surface for the native VOD player/replay. Sharing the live
+  // header never constructs a chat iframe or invokes its reload/window actions.
+  function makeToolbar({doc,title,mode,onMode,id='tcc-vod-controls',windowMode='vod-popup'}){
+    const host=doc.createElement('div');host.id=id;host.lang=I18n.language;host.dir=I18n.direction;host.setAttribute('data-tcc-window-mode',windowMode);
+    host.style.cssText=`position:fixed;inset:0 0 auto 0;height:${TCCCore.HEADER_HEIGHT}px;z-index:2147483601;pointer-events:none;`;
+    let destroyed=false;
+    const shadow=host.attachShadow({mode:'closed'}),style=element(doc,'style');style.textContent=CSS;
+    const header=makeHeader(doc,title,mode,value=>{if(!destroyed&&host.isConnected)onMode(value);});
+    const notice=element(doc,'div','notice');notice.setAttribute('role','status');notice.setAttribute('aria-live','polite');
+    shadow.append(style,header.bar,notice);
+    return {host,bar:header.bar,setMode:header.setMode,status(message){if(!destroyed)notice.textContent=message;},destroy(){destroyed=true;host.remove();}};
+  }
   function makePanel({doc,channel,hostname,mode,onMode,onChatWindow,native=false}){
     const host=doc.createElement('div');host.id='tcc-panel';host.lang=I18n.language;host.dir=I18n.direction;host.setAttribute('data-tcc-window-mode',native?'native-popout':'document-pip');host.style.cssText='position:fixed;inset:0;z-index:2147483601;pointer-events:none;';
     const shadow=host.attachShadow({mode:'closed'});const style=element(doc,'style');style.textContent=CSS;shadow.append(style);
     const panel=element(doc,'section','panel');panel.setAttribute('aria-label',t('panelLabel'));
-    const bar=element(doc,'header','bar');bar.style.pointerEvents='auto';const title=element(doc,'span','title',channel);title.title=channel;
-    const modes=makeModes(doc,mode,onMode);bar.append(title,modes.group);
+    const header=makeHeader(doc,channel,mode,onMode),bar=header.bar;
     const area=element(doc,'main','area');const video=element(doc,'div','video');
     if(native){panel.style.background='transparent';video.style.background='transparent';}else video.style.pointerEvents='auto';
     const chat=element(doc,'section','chat');chat.style.pointerEvents='auto';
@@ -41,7 +58,7 @@
     const reload=button(doc,t('reloadLabel'),()=>{notice.textContent='';frame.src=TCCCore.chatURL(channel,hostname);});reload.dir=I18n.direction;reload.title=t('reloadTitle');reload.setAttribute('aria-label',t('reloadTitle'));
     const separate=button(doc,t('separateLabel'),onChatWindow);separate.dir=I18n.direction;separate.title=t('separateTitle');separate.setAttribute('aria-label',t('separateTitle'));
     bar.append(reload,separate);chat.append(frame);area.append(video,chat);panel.append(bar,area,notice);shadow.append(panel);
-    return {host,video,frame,setMode:modes.setMode,setLayout(info){area.className=`area ${info.mode}`;area.style.setProperty('--chat-size',`${info.chat}px`);chat.hidden=info.mode==='hide';},status(message){notice.textContent=message;},destroy(){frame.removeAttribute('src');host.remove();}};
+    return {host,video,frame,setMode:header.setMode,setLayout(info){area.className=`area ${info.mode}`;area.style.setProperty('--chat-size',`${info.chat}px`);chat.hidden=info.mode==='hide';},status(message){notice.textContent=message;},destroy(){frame.removeAttribute('src');host.remove();}};
   }
-  globalThis.TCCUI=Object.freeze({makePanel,element});
+  globalThis.TCCUI=Object.freeze({makePanel,makeToolbar,element});
 })();

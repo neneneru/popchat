@@ -99,7 +99,7 @@
     "message": "Mantén abierta la pestaña original de Twitch mientras uses la ventana siempre visible. Si cierras, recargas o cambias de página en la pestaña original, la ventana pequeña también se cierra."
   },
   "helpRestoreNote": {
-    "message": "Al cerrar la ventana pequeña, el vídeo vuelve a la pestaña original."
+    "message": "Al cerrar la ventana siempre visible, el vídeo vuelve a la pestaña original."
   },
   "helpReloadNote": {
     "message": "Si no aparece la opción, recarga la página normal del canal en directo de Twitch."
@@ -117,7 +117,7 @@
     "message": "Ahora no"
   },
   "consentEnabled": {
-    "message": "Activada. Puedes usarla en las páginas de canales de Twitch en directo."
+    "message": "Activado. Puedes usarlo en canales en directo de Twitch y abrir páginas completas de archivos con la repetición del chat disponible en otra ventana."
   },
   "consentDisable": {
     "message": "Desactivar"
@@ -132,7 +132,7 @@
     "message": "¿Permites cargar y mostrar el chat oficial de Twitch?"
   },
   "consentLocalUse": {
-    "message": "La información de la página del directo necesaria para la visualización se usa en tu dispositivo y no se envía al desarrollador."
+    "message": "La información necesaria para mostrar las páginas en directo y los archivos de Twitch se usa en tu dispositivo. Cuando eliges abrir un archivo en otra ventana, su ID de vídeo y posición de reproducción se incluyen en la URL de la página oficial de Twitch. La extensión no guarda estos valores, no extrae mensajes del chat ni envía esta información al desarrollador."
   },
   "consentStored": {
     "message": "Solo se guardan en tu dispositivo los ajustes de visualización y tu decisión de consentimiento."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "No se pudo abrir la página de ajustes. Inténtalo de nuevo."
+  },
+  "vodPopupEntry": {
+    "message": "Abrir en otra ventana con repetición del chat"
+  },
+  "vodPipEntry": {
+    "message": "Siempre visible con repetición (experimental)"
+  },
+  "vodTitle": {
+    "message": "Repetición del archivo"
+  },
+  "vodMissing": {
+    "message": "Abre la página completa del archivo en Twitch con la repetición del chat visible y vuelve a intentarlo."
+  },
+  "vodUnavailable": {
+    "message": "La repetición del chat no está disponible. Twitch debe ofrecerla para este archivo."
+  },
+  "vodPopupOpened": {
+    "message": "El archivo se ha abierto en otra ventana. El vídeo original está en pausa."
+  },
+  "vodOpenPage": {
+    "message": "Abrir archivo con repetición del chat"
+  },
+  "vodCloseMenu": {
+    "message": "Cierra el menú de configuración de Twitch y vuelve a intentarlo."
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch ha cambiado el reproductor del archivo. Se ha vuelto a la página original."
+  },
+  "vodPipUnavailable": {
+    "message": "La opción de mantener el archivo siempre visible está desactivada en esta versión preliminar hasta verificar los controles y la repetición del chat de Twitch."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "No se pudo abrir la ventana del archivo. Revisa la configuración de ventanas emergentes de este sitio."
+  },
+  "vodErrorVideoMissing": {
+    "message": "Aún no se ha encontrado ningún vídeo. Inicia la reproducción del archivo y vuelve a intentarlo."
+  },
+  "helpVodHeading": {
+    "message": "Vídeos archivados"
+  },
+  "helpVodInstruction": {
+    "message": "En la página completa del archivo en Twitch, abre el menú del engranaje del reproductor y elige “Abrir en otra ventana con repetición del chat”. El vídeo y la repetición del chat disponible se abren en una ventana normal, que no se mantiene por encima de las demás."
+  },
+  "helpVodPlaybackNote": {
+    "message": "El vídeo de la pestaña original se pausa. Cerrar la ventana del archivo no reanuda la reproducción ni la devuelve a esa pestaña. Las posiciones de reproducción de las dos ventanas no se sincronizan."
   }
 }

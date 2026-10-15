@@ -14,27 +14,39 @@ La ventana de la extensión en la barra de herramientas muestra si está activad
 
 ## Uso
 
+### Emisiones en directo
+
 En la página de un canal de Twitch en directo, haz clic en la rueda dentada del reproductor. Elige “Ventana emergente” para una ventana normal o “Ventana emergente (siempre visible)” para mantenerla por encima de las demás. Elige la disposición del chat en la parte superior de la ventana pequeña.
 
 AUTO se adapta a la ventana; SIDE coloca el chat a la derecha; BOTTOM lo coloca debajo del vídeo; HIDE lo oculta manteniéndolo cargado. Elige otro modo para volver a mostrarlo. “Recargar” actualiza el chat oficial. “Otra ventana” abre solo el chat oficial por separado.
 
 Mantén abierta la pestaña original de Twitch mientras uses la ventana siempre visible. Si cierras, recargas o cambias de página en la pestaña original, la ventana pequeña también se cierra. Al cerrar la ventana pequeña, el vídeo vuelve a la pestaña original.
 
+### Vídeos archivados (VOD, versión 1.6.0)
+
+En una página oficial de vídeo archivado de Twitch, abre los ajustes del reproductor con el icono de engranaje y elige “Abrir en otra ventana con repetición del chat”. Se abre una ventana normal con la página oficial del vídeo en la posición de reproducción actual, usando el reproductor y la repetición del chat de Twitch. La pestaña original permanece abierta y su vídeo se pausa. Al cerrar la ventana, su posición de reproducción no se copia automáticamente a la pestaña original ni se reanuda el vídeo original.
+
+AUTO, SIDE, BOTTOM y HIDE también funcionan con la repetición del chat. Los VOD solo admiten ventanas normales, sin la opción de mantenerlas siempre por encima de las demás. La barra del VOD no tiene botones “Recargar” ni “Otra ventana”. La disponibilidad de la repetición del chat y el comportamiento de reproducción dependen de Twitch.
+
 ## Compatibilidad y límites
 
-Para Chrome y Edge de escritorio con Document Picture-in-Picture (Chromium 116 o posterior). No incluye móviles, Firefox, VOD ni clips. La opción solo se añade si la extensión reconoce la estructura del menú de Twitch; una actualización de Twitch podría impedir que aparezca. Cerrar, recargar o cambiar de página en la pestaña original cierra la ventana siempre visible. Algunos ajustes y elementos superpuestos del reproductor de Twitch no acompañan al vídeo. El inicio de sesión y el envío de mensajes dependen de Twitch y de los ajustes del navegador.
+Para Chrome y Edge de escritorio (Chromium 116 o posterior). Las ventanas siempre visibles de las emisiones en directo requieren Document Picture-in-Picture; las ventanas normales de VOD no. No incluye móviles, Firefox ni clips. La opción solo se añade si la extensión reconoce la estructura del menú de Twitch; una actualización de Twitch podría impedir que aparezca. Cerrar, recargar o cambiar de página en la pestaña original cierra la ventana siempre visible. Algunos ajustes y elementos superpuestos del reproductor de Twitch no acompañan al vídeo. El inicio de sesión y el envío de mensajes dependen de Twitch y de los ajustes del navegador.
 
 La ventana siempre visible usa Document Picture-in-Picture. Esta función no añade chat al PiP normal que solo muestra vídeo.
 
 ## Privacidad
 
-Una vez activada, la extensión usa localmente la URL del canal actual, el elemento de vídeo existente y la estructura del reproductor y del menú para organizar vídeo y chat. El chat oficial se conecta directamente a Twitch y puede usar tu sesión de Twitch. Solo se guardan localmente los ajustes de visualización y tu decisión de consentimiento; no se envían datos al desarrollador.
+Una vez activada, la extensión usa localmente la URL del canal o vídeo actual, la posición de reproducción actual, el elemento de vídeo existente y la estructura del reproductor y del menú para organizar vídeo y chat. El chat oficial se conecta directamente a Twitch y puede usar tu sesión de Twitch. Solo se guardan localmente los ajustes de visualización y tu decisión de consentimiento; no se envían datos al desarrollador.
 
-La extensión no lee la URL del canal ni la estructura del reproductor o del menú, ni carga el chat oficial, hasta que la actives. Abre “Ayuda y ajustes” desde la ventana de la extensión en la barra de herramientas y elige “Desactivar” en la página dedicada para retirar tu consentimiento. Se cierran el chat integrado y la ventana siempre visible gestionados por la extensión y se devuelve el vídeo a su lugar, manteniendo tus ajustes de visualización.
+La extensión no lee la URL del canal o vídeo, la posición de reproducción ni la estructura del reproductor o del menú, ni carga el chat oficial, hasta que la actives. Abre “Ayuda y ajustes” desde la ventana de la extensión en la barra de herramientas y elige “Desactivar” en la página dedicada para retirar tu consentimiento. Se cierran el chat integrado y la ventana siempre visible gestionados por la extensión y se devuelve el vídeo a su lugar, manteniendo tus ajustes de visualización.
 
-La extensión no tiene análisis, publicidad ni servidor propio. Lee el canal de la URL actual solo para mostrar su chat oficial. Solo guarda el modo de disposición, el ancho y alto de la ventana y tu decisión de consentimiento en el almacenamiento local de la extensión, sin sincronización. No guarda chats, historial de navegación, nombres de canales o usuarios, credenciales ni cookies, y no lee el contenido del marco del chat oficial. Los elementos integrados oficiales se conectan directamente a Twitch y usan su sesión cuando lo permite el navegador. Twitch gestiona el inicio de sesión y el chat según sus propias políticas. Solo se usa el permiso storage, en páginas HTTPS de www.twitch.tv y player.twitch.tv.
+La extensión no tiene análisis, publicidad ni servidor propio. En emisiones en directo, lee el canal de la URL actual solo para mostrar su chat oficial. Solo guarda el modo de disposición, el ancho y alto de la ventana y tu decisión de consentimiento en el almacenamiento local de la extensión, sin sincronización. No guarda chats, historial de navegación, nombres de canales o usuarios, credenciales ni cookies, y no lee el contenido del marco del chat oficial. Los elementos integrados oficiales se conectan directamente a Twitch y usan su sesión cuando lo permite el navegador. Twitch gestiona el inicio de sesión y el chat según sus propias políticas. Solo se usa el permiso storage, en páginas HTTPS de www.twitch.tv y player.twitch.tv.
+
+Para los VOD, el ID del vídeo y la posición de reproducción actual se usan para abrir la página oficial del vídeo archivado de Twitch. La extensión organiza el reproductor y la repetición del chat existentes sin hacer solicitudes adicionales a la API de Twitch ni leer los mensajes de la repetición. No se envían datos al desarrollador. Al desactivar la extensión, la ventana de VOD abierta recupera su disposición normal; la página oficial de Twitch permanece abierta.
 
 ## Actualizar
+
+Mantén activada una sola edición de PopChat. Desactiva las instalaciones antiguas o duplicadas antes de activar la versión actualizada y después recarga todas las páginas de Twitch abiertas.
 
 Cierra la ventana pequeña. Sustituye toda la carpeta cargada en la misma ruta registrada en el navegador, sin mezclar archivos nuevos con los antiguos. Recarga la extensión en el gestor de extensiones del navegador y después todas las páginas de Twitch abiertas. Las actualizaciones normales conservan los ajustes de disposición guardados.
 

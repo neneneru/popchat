@@ -99,7 +99,7 @@
     "message": "Biarkan tab Twitch asal tetap terbuka saat memakai jendela yang selalu di depan. Menutup, memuat ulang, atau berpindah halaman di tab asal juga akan menutup jendela kecil."
   },
   "helpRestoreNote": {
-    "message": "Menutup jendela kecil akan mengembalikan video ke tab asal."
+    "message": "Menutup jendela yang selalu di depan akan mengembalikan video ke tab asal."
   },
   "helpReloadNote": {
     "message": "Jika opsi tidak muncul, muat ulang halaman kanal siaran langsung Twitch yang biasa."
@@ -117,7 +117,7 @@
     "message": "Jangan sekarang"
   },
   "consentEnabled": {
-    "message": "Aktif. Anda dapat menggunakannya di halaman siaran langsung Twitch."
+    "message": "Diaktifkan. Anda dapat menggunakannya di kanal siaran langsung Twitch dan membuka halaman arsip lengkap di jendela lain, dengan tayangan ulang chat jika tersedia."
   },
   "consentDisable": {
     "message": "Nonaktifkan"
@@ -132,7 +132,7 @@
     "message": "Apakah Anda mengizinkan pemuatan dan penayangan chat resmi Twitch?"
   },
   "consentLocalUse": {
-    "message": "Informasi halaman siaran langsung yang diperlukan untuk tampilan digunakan di perangkat Anda dan tidak dikirim ke pengembang."
+    "message": "Informasi yang diperlukan untuk menampilkan halaman siaran langsung dan arsip Twitch digunakan di perangkat Anda. Saat Anda memilih untuk membuka arsip di jendela lain, ID video dan posisi pemutarannya disertakan dalam URL halaman resmi Twitch. Ekstensi tidak menyimpan nilai tersebut, mengekstrak pesan chat, atau mengirimkan informasi ini kepada pengembang."
   },
   "consentStored": {
     "message": "Hanya pengaturan tampilan dan pilihan persetujuan Anda yang disimpan di perangkat."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "Halaman pengaturan tidak dapat dibuka. Silakan coba lagi."
+  },
+  "vodPopupEntry": {
+    "message": "Popout dengan tayangan ulang chat"
+  },
+  "vodPipEntry": {
+    "message": "Selalu di depan dengan tayangan ulang (eksperimental)"
+  },
+  "vodTitle": {
+    "message": "Tayangan ulang arsip"
+  },
+  "vodMissing": {
+    "message": "Buka halaman arsip lengkap di Twitch dengan tayangan ulang chat terlihat, lalu coba lagi."
+  },
+  "vodUnavailable": {
+    "message": "Tayangan ulang chat tidak tersedia. Twitch harus menyediakannya untuk arsip ini."
+  },
+  "vodPopupOpened": {
+    "message": "Arsip dibuka di jendela baru. Video awal dijeda."
+  },
+  "vodOpenPage": {
+    "message": "Buka arsip dengan tayangan ulang chat"
+  },
+  "vodCloseMenu": {
+    "message": "Tutup menu pengaturan Twitch, lalu coba lagi."
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch mengubah pemutar arsip. Tampilan dikembalikan ke halaman awal."
+  },
+  "vodPipUnavailable": {
+    "message": "Fitur selalu di depan untuk arsip dinonaktifkan dalam versi pratinjau ini sampai kontrol Twitch dan tayangan ulang chat terverifikasi."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "Jendela arsip tidak dapat dibuka. Periksa pengaturan pop-up untuk situs ini."
+  },
+  "vodErrorVideoMissing": {
+    "message": "Video belum ditemukan. Putar arsip, lalu coba lagi."
+  },
+  "helpVodHeading": {
+    "message": "Video arsip"
+  },
+  "helpVodInstruction": {
+    "message": "Di halaman arsip lengkap di Twitch, buka menu pengaturan pemutar melalui ikon roda gigi dan pilih “Popout dengan tayangan ulang chat”. Video dan tayangan ulang chat yang tersedia dibuka di jendela biasa yang tidak selalu berada di depan jendela lain."
+  },
+  "helpVodPlaybackNote": {
+    "message": "Video di tab asal dijeda. Menutup jendela arsip tidak melanjutkan pemutaran atau memindahkannya kembali ke tab tersebut. Posisi pemutaran kedua jendela tidak disinkronkan."
   }
 }

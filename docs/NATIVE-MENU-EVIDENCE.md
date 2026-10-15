@@ -19,10 +19,35 @@ These values are the exact allowlist shipped in `extension/gear-menu.js`:
 - French: Ouvrir dans nouvelle fenêtre
 - Russian: Открыть в отдельном окне
 - Arabic: مشغّل منبثق
+- Brazilian Portuguese: Pop-out de reprodução
 
-The extension's 11 UI translations are independent of Twitch's interface language. Brazilian Portuguese is not in the native-label allowlist, so its Twitch menu does not receive the always-on-top entry. English or another supported Twitch interface language can be used instead. No Indonesian native label is asserted. Adding chat to Twitch's normal popout does not depend on these labels.
+The extension's 11 UI translations are independent of Twitch's interface language. Adding live chat to Twitch's normal popout does not depend on these labels. The VOD replay-popup entry uses the same adapter and label allowlist; embedded VODs use the localized full-archive entry. Neither VOD entry requires Document PiP support. There is no floating fallback.
 
 A locale match alone does not prove the current site's DOM structure is compatible. Twitch can change it independently, and unknown variants fail closed without adding a fallback launcher or modifying the original popout control.
+
+## Browser evidence: 2026-10-15
+
+The Twitch player settings menu was inspected in Chrome with Twitch set to `Português - Brasil` (`document.documentElement.lang` was `pt-BR`).
+
+The visible player settings menu displayed the exact text `Pop-out de reprodução`. Read-only inspection of that displayed button found:
+
+```html
+<div data-a-target="player-settings-menu">
+  <div class="Layout-sc-1xcs6mc-0 eDiLRr">
+    <button class="ScInteractableBase-sc-ofisyf-0 ScInteractableDefault-sc-ofisyf-1 cQzzvm iTnOTE tw-interactable" role="menuitem">
+      <div class="Layout-sc-1xcs6mc-0 dmmLGq">
+        <div class="Layout-sc-1xcs6mc-0 dmulkQ">Pop-out de reprodução</div>
+      </div>
+    </button>
+  </div>
+</div>
+```
+
+The excerpt shows the observed parent menu plus the observed item only; other menu items are omitted. The class strings are observation evidence, not new selectors. The button had no stable action-specific data attribute, so the fix adds only the verified Portuguese label and retains the existing hierarchy and uniqueness guards.
+
+The complete visible Twitch language selector contained 31 entries and no Indonesian/Bahasa Indonesia option. There is therefore no observed native Indonesian string to add. Indonesian extension controls remain translated and can accompany a Twitch UI in English or another recognized language. This observation does not claim that Indonesian is unavailable on every Twitch surface or future build.
+
+This was a native menu/DOM inspection, not execution of the extension in every locale.
 
 ## References
 

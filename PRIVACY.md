@@ -1,8 +1,8 @@
 # PopChat for Twitch Privacy Policy
 
-Last updated: 2026-10-06
+Last updated: 2026-10-15
 
-Applies to version 1.5.1.
+Applies to version 1.6.0.
 
 Publisher: [neneneru](https://github.com/neneneru)
 
@@ -18,21 +18,21 @@ Privacy contact and support: [GitHub Issues](https://github.com/neneneru/popchat
 
 ### 端末内で使用する情報
 
-本拡張機能は、現在開いているTwitchページのURLからチャンネル名を判定し、同じチャンネルの公式チャットを表示します。動画要素、ウィンドウの寸法、プレイヤーの設定メニューなど、その機能に必要なページ構造を端末内で確認します。Document Picture-in-Pictureでは、ページ上にある同じ動画要素を小窓へ移動します。動画や画面を録画・複製・アップロードする処理はありません。
+本拡張機能は、現在開いているTwitchページのURLからチャンネル名を判定し、同じチャンネルの公式チャットを表示します。動画要素、ウィンドウの寸法、プレイヤーの設定メニューなど、その機能に必要なページ構造を端末内で確認します。ライブ配信のDocument Picture-in-Pictureでは、ページ上にある同じ動画要素を小窓へ移動します。アーカイブでは、URLから動画IDと動画要素から現在の再生位置を読み、利用者がボタンを押したときに、そのIDと開始時刻を含むTwitch公式VODページを別窓で開きます。別窓のプレイヤーと公式リプレイは同じページ内で配置を調整します。VODの最前面表示は対応していません。動画や画面を録画・複製・アップロードする処理はありません。
 
-ページURL、チャンネル名、動画要素、メニュー情報を閲覧履歴として記録せず、開発者へ送信しません。公式チャットのiframe内にあるメッセージ本文を、本拡張機能のコードが読み取り・保存・独自解析する処理はありません。
+ページURL、チャンネル名、動画ID・再生位置、動画要素、メニュー情報を閲覧履歴として記録せず、開発者へ送信しません。公式チャットのiframe内やアーカイブのリプレイにあるメッセージ本文を、本拡張機能のコードが読み取り・保存・独自解析する処理はありません。
 
 ### 保存する設定
 
 Chromeの拡張機能用ローカルストレージに、チャットの表示モード、最前面ウィンドウの幅・高さ、機能の有効化に同意したことを示す記録を保存します。具体的にはtccPreferencesに表示モード・幅・高さ、tccConsentVersionに同意済みのバージョン番号1、無効化時は0を保存します。氏名、アカウント、同意日時とは結び付けません。Chromeの同期ストレージは使いません。
 
-拡張機能のアイコンから「使い方・設定」ページを開き、機能を無効にできます。無効にすると、この拡張機能が管理する最前面の小窓を閉じ、埋め込みチャットと追加メニューを取り除き、動画を元の位置へ戻します。「別窓」で開いたTwitchのチャットウィンドウは、自動では閉じません。表示設定は端末内に残ります。設定は通常の更新後も保持されますが、同意記録のない旧版からの更新では、同意して有効にするまで機能は動作しません。本拡張機能をアンインストールすると、拡張機能用ストレージの設定と同意記録は削除されます。
+拡張機能のアイコンから「使い方・設定」ページを開き、機能を無効にできます。無効にすると、この拡張機能が管理する最前面の小窓を閉じ、埋め込みチャットと追加メニューを取り除き、動画を元の位置へ戻します。「別窓」で開いたTwitchのチャットやアーカイブのウィンドウは、自動では閉じません。アーカイブの追加操作バーと配置変更も、無効化すると取り除きます。表示設定は端末内に残ります。設定は通常の更新後も保持されますが、同意記録のない旧版からの更新では、同意して有効にするまで機能は動作しません。本拡張機能をアンインストールすると、拡張機能用ストレージの設定と同意記録は削除されます。
 
 認証情報、パスワード、Cookie、チャットメッセージ、アカウント識別子、チャンネル名、閲覧履歴を本拡張機能の保存領域へ保存しません。
 
 ### Twitchとの通信
 
-公式チャットの埋め込みや別窓を表示すると、ブラウザはTwitchへ接続します。チャットを表示するために、対象のチャンネル名がTwitchのURLの一部として渡されます。既存のTwitchセッションが使われる場合があり、チャットへ入力・送信する内容、IPアドレス、Cookieなどは、Twitchのサービスとブラウザ設定に従って処理されます。映像もTwitchの既存の配信接続を使用します。
+公式チャットの埋め込みや別窓を表示すると、ブラウザはTwitchへ接続します。チャットを表示するために、対象のチャンネル名がTwitchのURLの一部として渡されます。アーカイブの別窓では動画IDと開始時刻がTwitchのURLに渡され、新しい公式ページの動画とリプレイが読み込まれます。既存のTwitchセッションが使われる場合があり、チャットへ入力・送信する内容、IPアドレス、Cookieなどは、Twitchのサービスとブラウザ設定に従って処理されます。映像はTwitchから配信されます。ライブ配信の最前面表示では既存の動画要素と配信接続を使用し、アーカイブの別窓では新しい公式ページが動画を読み込みます。
 
 Twitchによる処理、保存期間、削除方法、関連サービスについては、[Twitchのプライバシー通知](https://legal.twitch.com/en/legal/privacy-notice/)を確認してください。本拡張機能はTwitchの処理を管理しません。Twitch側の通信があるため、「外部通信を一切行わない」製品ではありません。
 
@@ -63,21 +63,21 @@ On first installation, a local onboarding and settings page opens in a browser t
 
 ### Information used on your device
 
-The extension reads the current Twitch page URL to identify the channel and display that channel's official chat. It examines the video element, window dimensions, and player settings-menu structure locally as needed for its features. Document Picture-in-Picture moves the existing video element into the small window. The extension does not record, duplicate, or upload video or screen captures.
+The extension reads the current Twitch page URL to identify the channel and display that channel's official chat. It examines the video element, window dimensions, and player settings-menu structure locally as needed for its features. For live streams, Document Picture-in-Picture moves the existing video element into the small window. For archives, the extension reads the video ID from the URL and the current playback position from the video element. When you press its button, it opens an official Twitch VOD page whose URL contains that video ID and starting time. The new page keeps its native player and replay in the same document and adjusts their layout. Archive always-on-top is disabled in this version. The extension does not record, duplicate, or upload video or screen captures.
 
-The extension does not record page URLs, channel names, video elements, or menu information as a browsing-history log or send them to the developer. Its code does not read, store, or independently analyze message bodies inside the official chat iframe.
+The extension does not record page URLs, channel names, video IDs, playback positions, video elements, or menu information as a browsing-history log or send them to the developer. Its code does not read, store, or independently analyze message bodies inside the official chat iframe or the native archive replay.
 
 ### Saved settings
 
 The extension stores the chat layout mode, the width and height of the always-on-top window, and your enablement consent state in Chrome's local extension storage. Specifically, tccPreferences stores mode, width, and height; tccConsentVersion stores consent version 1 when enabled and 0 when disabled. The consent record is not associated with your name, account, or a consent timestamp. The extension does not use Chrome sync storage.
 
-You can open Help and settings from the extension's toolbar popup and disable the features there. Disabling closes the always-on-top window managed by the extension, removes the embedded chat and added menu entry, and restores the video to its original place. A separate official Twitch chat window opened with the separate-chat button is not closed automatically. Layout preferences remain on your device. Settings normally persist through updates, but upgrades from versions without a consent record remain disabled until you agree and enable the features. Uninstalling the extension removes its local settings and consent record.
+You can open Help and settings from the extension's toolbar popup and disable the features there. Disabling closes the always-on-top window managed by the extension, removes the embedded chat and added menu entry, and restores the video to its original place. Separate official Twitch chat and archive windows are not closed automatically. Disabling also removes archive controls and layout adjustments. Layout preferences remain on your device. Settings normally persist through updates, but upgrades from versions without a consent record remain disabled until you agree and enable the features. Uninstalling the extension removes its local settings and consent record.
 
 It does not save credentials, passwords, cookies, chat messages, account identifiers, channel names, or browsing history in its extension storage.
 
 ### Connections to Twitch
 
-Displaying embedded official chat or opening its separate window connects your browser to Twitch. The channel name is included in the Twitch URL to load the correct chat. An existing Twitch session may be used. Content that you enter or send through chat, your IP address, cookies, and other service data are processed by Twitch according to its services and your browser settings. Video continues to use Twitch's existing streaming connection.
+Displaying embedded official chat or opening its separate window connects your browser to Twitch. The channel name is included in the Twitch URL to load the correct chat. Archive popup URLs include the video ID and starting time; Twitch loads the new official page, video, and native replay. An existing Twitch session may be used. Content that you enter or send through chat, your IP address, cookies, and other service data are processed by Twitch according to its services and your browser settings. Video is delivered by Twitch. Live always-on-top viewing keeps the existing video element and stream connection; an archive popup loads video through its new official page.
 
 See the [Twitch Privacy Notice](https://legal.twitch.com/en/legal/privacy-notice/) for Twitch's processing, retention, deletion options, and related services. The extension does not control Twitch's processing. Because Twitch's services communicate over the network, this is not an entirely offline product.
 

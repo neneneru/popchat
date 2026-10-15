@@ -99,7 +99,7 @@
     "message": "항상 위에 표시되는 창을 사용하는 동안 원래 Twitch 탭을 열어 두세요. 원래 탭을 닫거나 새로고침하거나 다른 페이지로 이동하면 작은 창도 닫힙니다."
   },
   "helpRestoreNote": {
-    "message": "작은 창을 닫으면 영상이 원래 탭으로 돌아갑니다."
+    "message": "항상 위에 표시되는 창을 닫으면 영상이 원래 탭으로 돌아갑니다."
   },
   "helpReloadNote": {
     "message": "메뉴 항목이 보이지 않으면 Twitch의 일반 생방송 채널 페이지를 새로고침하세요."
@@ -117,7 +117,7 @@
     "message": "지금은 안 함"
   },
   "consentEnabled": {
-    "message": "활성화되어 있습니다. Twitch 생방송 채널 페이지에서 사용할 수 있습니다."
+    "message": "활성화되었습니다. Twitch 생방송 채널에서 사용할 수 있으며, 채팅 다시보기가 제공되는 전체 다시보기 페이지를 별도 창에서 열 수 있습니다."
   },
   "consentDisable": {
     "message": "비활성화"
@@ -132,7 +132,7 @@
     "message": "Twitch 공식 채팅을 불러와 표시해도 될까요?"
   },
   "consentLocalUse": {
-    "message": "표시에 필요한 생방송 페이지 정보는 기기 내에서 사용하며 개발자에게 전송하지 않습니다."
+    "message": "Twitch 생방송 및 다시보기 페이지의 표시에 필요한 정보는 기기에서 사용됩니다. 사용자가 다시보기를 별도 창에서 열도록 선택하면 영상 ID와 재생 위치가 Twitch 공식 페이지 URL에 포함됩니다. 확장 프로그램은 이 값을 저장하거나, 채팅 메시지를 추출하거나, 이 정보를 개발자에게 전송하지 않습니다."
   },
   "consentStored": {
     "message": "기기에는 표시 설정과 동의 기록만 저장합니다."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "설정 페이지를 열지 못했습니다. 다시 시도해 주세요."
+  },
+  "vodPopupEntry": {
+    "message": "채팅 다시보기와 함께 팝아웃"
+  },
+  "vodPipEntry": {
+    "message": "다시보기와 함께 항상 위에 표시 (실험적 기능)"
+  },
+  "vodTitle": {
+    "message": "지난 방송 다시보기"
+  },
+  "vodMissing": {
+    "message": "Twitch의 전체 다시보기 페이지에서 채팅 다시보기를 표시한 다음 다시 시도하세요."
+  },
+  "vodUnavailable": {
+    "message": "채팅 다시보기를 이용할 수 없습니다. Twitch에서 이 영상의 채팅 다시보기를 제공해야 합니다."
+  },
+  "vodPopupOpened": {
+    "message": "다시보기를 새 창에서 열었습니다. 원래 영상은 일시 정지되었습니다."
+  },
+  "vodOpenPage": {
+    "message": "채팅과 함께 다시보기 열기"
+  },
+  "vodCloseMenu": {
+    "message": "Twitch 설정 메뉴를 닫은 다음 다시 시도하세요."
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch에서 다시보기 플레이어를 변경하여 원래 페이지로 돌아갔습니다."
+  },
+  "vodPipUnavailable": {
+    "message": "Twitch 컨트롤과 채팅 다시보기의 동작이 검증될 때까지 이 미리보기 버전에서는 다시보기의 항상 위에 표시 기능이 비활성화됩니다."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "다시보기 창을 열지 못했습니다. 이 사이트의 팝업 설정을 확인하세요."
+  },
+  "vodErrorVideoMissing": {
+    "message": "아직 영상을 찾지 못했습니다. 다시보기를 재생한 다음 다시 시도하세요."
+  },
+  "helpVodHeading": {
+    "message": "지난 방송 다시보기"
+  },
+  "helpVodInstruction": {
+    "message": "Twitch의 전체 다시보기 페이지에서 플레이어의 톱니바퀴 설정 메뉴를 열고 “채팅 다시보기와 함께 팝아웃”을 선택하세요. 영상과 제공되는 채팅 다시보기가 일반 창에서 열리며, 항상 위에 표시되는 창은 아닙니다."
+  },
+  "helpVodPlaybackNote": {
+    "message": "원래 탭의 영상은 일시 정지됩니다. 다시보기 창을 닫아도 원래 탭에서 재생이 자동으로 재개되거나 재생 중인 영상이 해당 탭으로 돌아가지는 않습니다. 두 창의 재생 위치는 동기화되지 않습니다."
   }
 }

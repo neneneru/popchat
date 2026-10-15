@@ -99,7 +99,7 @@
     "message": "Lass den ursprünglichen Twitch-Tab geöffnet, solange du das Vordergrundfenster verwendest. Wenn du den Tab schließt, neu lädst oder zu einer anderen Seite wechselst, schließt sich auch das kleine Fenster."
   },
   "helpRestoreNote": {
-    "message": "Wenn du das kleine Fenster schließt, kehrt das Video zum ursprünglichen Tab zurück."
+    "message": "Wenn du das Fenster schließt, das immer im Vordergrund bleibt, kehrt das Video zum ursprünglichen Tab zurück."
   },
   "helpReloadNote": {
     "message": "Fehlt der Menüpunkt, lade die normale Live-Kanalseite von Twitch neu."
@@ -117,7 +117,7 @@
     "message": "Jetzt nicht"
   },
   "consentEnabled": {
-    "message": "Aktiviert. Du kannst die Erweiterung auf Twitch-Livestream-Seiten verwenden."
+    "message": "Aktiviert. Du kannst die Erweiterung auf Twitch-Livekanälen verwenden und vollständige Archivseiten mit verfügbarer Chat-Wiedergabe in einem separaten Fenster öffnen."
   },
   "consentDisable": {
     "message": "Deaktivieren"
@@ -132,7 +132,7 @@
     "message": "Darf die Erweiterung den offiziellen Twitch-Chat laden und anzeigen?"
   },
   "consentLocalUse": {
-    "message": "Informationen der Livestream-Seite, die für die Anzeige benötigt werden, werden auf deinem Gerät verwendet und nicht an den Entwickler gesendet."
+    "message": "Informationen zur Anzeige von Twitch-Livekanälen und Archivseiten werden auf deinem Gerät verwendet. Wenn du ein Archivvideo in einem separaten Fenster öffnest, werden seine Video-ID und Wiedergabeposition in die URL der offiziellen Twitch-Seite aufgenommen. Die Erweiterung speichert diese Werte nicht, extrahiert keine Chatnachrichten und sendet diese Informationen nicht an den Entwickler."
   },
   "consentStored": {
     "message": "Nur Anzeigeeinstellungen und deine Einwilligung werden auf deinem Gerät gespeichert."
@@ -166,5 +166,50 @@
   },
   "errorOpenSettings": {
     "message": "Die Einstellungsseite konnte nicht geöffnet werden. Bitte versuche es erneut."
+  },
+  "vodPopupEntry": {
+    "message": "Popout mit Chat-Wiedergabe"
+  },
+  "vodPipEntry": {
+    "message": "Immer im Vordergrund mit Wiedergabe (experimentell)"
+  },
+  "vodTitle": {
+    "message": "Archiv-Wiedergabe"
+  },
+  "vodMissing": {
+    "message": "Öffne die vollständige Twitch-Seite des Archivvideos mit sichtbarer Chat-Wiedergabe und versuche es erneut."
+  },
+  "vodUnavailable": {
+    "message": "Die Chat-Wiedergabe ist nicht verfügbar. Twitch muss sie für dieses Archivvideo bereitstellen."
+  },
+  "vodPopupOpened": {
+    "message": "Das Archivvideo wurde in einem neuen Fenster geöffnet. Das ursprüngliche Video ist pausiert."
+  },
+  "vodOpenPage": {
+    "message": "Archivvideo mit Chat-Wiedergabe öffnen"
+  },
+  "vodCloseMenu": {
+    "message": "Schließe das Twitch-Einstellungsmenü und versuche es erneut."
+  },
+  "vodPlayerChanged": {
+    "message": "Twitch hat den Archivplayer geändert. Die ursprüngliche Seite wurde wiederhergestellt."
+  },
+  "vodPipUnavailable": {
+    "message": "Die Anzeige von Archivvideos im Vordergrund ist in dieser Vorschau deaktiviert, bis die Twitch-Bedienelemente und die Chat-Wiedergabe überprüft sind."
+  },
+  "vodErrorPopupBlocked": {
+    "message": "Das Archivfenster konnte nicht geöffnet werden. Prüfe die Pop-up-Einstellungen für diese Website."
+  },
+  "vodErrorVideoMissing": {
+    "message": "Noch kein Video gefunden. Starte die Wiedergabe des Archivvideos und versuche es erneut."
+  },
+  "helpVodHeading": {
+    "message": "Archivvideos"
+  },
+  "helpVodInstruction": {
+    "message": "Öffne auf der vollständigen Twitch-Seite des Archivvideos das Zahnradmenü des Players und wähle „Popout mit Chat-Wiedergabe“. Das Video und die verfügbare Chat-Wiedergabe werden in einem normalen Fenster geöffnet, das nicht immer im Vordergrund bleibt."
+  },
+  "helpVodPlaybackNote": {
+    "message": "Das Video im ursprünglichen Tab wird pausiert. Das Schließen des Archivfensters setzt die Wiedergabe dort nicht fort und überträgt sie nicht zurück. Die Wiedergabepositionen der beiden Fenster werden nicht synchronisiert."
   }
 }
